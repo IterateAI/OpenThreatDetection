@@ -1,0 +1,317 @@
+2023-06-30 14:01:57 : INFO : <module> : 30 - Setup complete (v1.0)
+2023-06-30 14:01:57 : INFO : <module> : 39 - No GPU devices found
+2023-06-30 14:01:57 : INFO : <module> : 50 - Input request: {'video_link': 'rtsp://admin:iterate411@192.168.1.247', 'building': 'gym', 'video_type': 'rtsp', 'friendly_name': 'Gymnasium', 'file_original_name': None}
+2023-06-30 14:01:57 : INFO : <module> : 58 - Detection for video stream starts...
+2023-06-30 14:01:57 : INFO : <module> : 62 - GPU Utilization before: 
+2023-06-30 14:01:58 : INFO : <module> : 23 - imported packages within inference_images_weapon
+2023-06-30 14:01:58 : INFO : <module> : 41 - loading weapon model: tf
+2023-06-30 14:02:14 : INFO : <module> : 50 - loaded weapon model
+2023-06-30 14:02:14 : INFO : detect : 50 - Video source: rtsp://admin:iterate411@192.168.1.247
+2023-06-30 14:02:14 : INFO : detect : 71 - msg_local_py[payload]: {'video_link': 'rtsp://admin:iterate411@192.168.1.247', 'building': 'gym', 'video_type': 'rtsp', 'friendly_name': 'Gymnasium', 'file_original_name': None}
+2023-06-30 14:02:14 : INFO : detect : 134 - Begin video capture now: rtsp://admin:iterate411@192.168.1.247
+2023-06-30 14:02:14 : INFO : detect : 145 - Within reading path
+2023-06-30 14:02:17 : WARNING : detect : 191 - Gymnasium folder created
+2023-06-30 14:02:21 : INFO : detect : 272 - Frame #: 100
+2023-06-30 14:02:21 : INFO : inference_images_weapon : 57 - started weapon inference
+2023-06-30 14:02:23 : INFO : inference_images_weapon : 87 - fps after inference: 0.4638328907113524
+2023-06-30 14:02:23 : INFO : inference_images_weapon : 145 - Ended weapon inference
+2023-06-30 14:02:23 : INFO : detect : 278 - FPS01: 0.46
+2023-06-30 14:02:23 : INFO : detect : 338 - After fetching img
+2023-06-30 14:02:26 : INFO : detect : 272 - Frame #: 200
+2023-06-30 14:02:26 : INFO : inference_images_weapon : 57 - started weapon inference
+2023-06-30 14:02:28 : INFO : inference_images_weapon : 87 - fps after inference: 0.7080943294263788
+2023-06-30 14:02:28 : INFO : inference_images_weapon : 145 - Ended weapon inference
+2023-06-30 14:02:28 : INFO : detect : 278 - FPS01: 0.70
+2023-06-30 14:02:28 : INFO : detect : 326 - After sending the input
+2023-06-30 14:02:28 : INFO : do_restful : 20 - RESTful: {'enable': True, 'url': 'http://localhost:5001/consumeevent'}
+2023-06-30 14:02:28 : INFO : do_restful : 25 - post to local wep RESTful service {"status": "Weapon Detected |Gun : 0.8346223", "video_name": "Gymnasium", "datetime": "30-06-2023 14:02:28", "Threat_status": "Threat detected | Weapon:['Gun : 0.8346223']", "image_path": "weapon_30-06-2023 14:02:28.jpg", "weapon_images": ["weapon_30-06-2023 14:02:28.jpg"]}
+2023-06-30 14:02:28 : INFO : do_restful : 27 - response: <Response [200]>
+2023-06-30 14:02:28 : INFO : do_restful : 29 - post to remote RESTful service {"status": "Weapon Detected |Gun : 0.8346223", "video_name": "Gymnasium", "datetime": "30-06-2023 14:02:28", "Threat_status": "Threat detected | Weapon:['Gun : 0.8346223']", "image_path": "weapon_30-06-2023 14:02:28.jpg", "weapon_images": ["weapon_30-06-2023 14:02:28.jpg"]}, url:http://localhost:5001/consumeevent
+2023-06-30 14:02:28 : INFO : do_restful : 31 - response: <Response [200]>
+2023-06-30 14:02:28 : INFO : detect : 338 - After fetching img
+2023-06-30 14:02:28 : WARNING : detect : 376 - Gun : 0.8346223 Detected in Frame: 200
+2023-06-30 14:02:31 : INFO : detect : 272 - Frame #: 300
+2023-06-30 14:02:31 : INFO : inference_images_weapon : 57 - started weapon inference
+2023-06-30 14:02:33 : INFO : inference_images_weapon : 87 - fps after inference: 0.7720845932795221
+2023-06-30 14:02:33 : INFO : inference_images_weapon : 145 - Ended weapon inference
+2023-06-30 14:02:33 : INFO : detect : 278 - FPS01: 0.77
+2023-06-30 14:02:33 : INFO : detect : 326 - After sending the input
+2023-06-30 14:02:33 : INFO : do_restful : 20 - RESTful: {'enable': True, 'url': 'http://localhost:5001/consumeevent'}
+2023-06-30 14:02:33 : INFO : do_restful : 25 - post to local wep RESTful service {"status": "Weapon Detected |Gun : 0.79236585", "video_name": "Gymnasium", "datetime": "30-06-2023 14:02:33", "Threat_status": "Threat detected | Weapon:['Gun : 0.79236585']", "image_path": "weapon_30-06-2023 14:02:33.jpg", "weapon_images": ["weapon_30-06-2023 14:02:33.jpg"]}
+2023-06-30 14:02:33 : INFO : do_restful : 27 - response: <Response [200]>
+2023-06-30 14:02:33 : INFO : do_restful : 29 - post to remote RESTful service {"status": "Weapon Detected |Gun : 0.79236585", "video_name": "Gymnasium", "datetime": "30-06-2023 14:02:33", "Threat_status": "Threat detected | Weapon:['Gun : 0.79236585']", "image_path": "weapon_30-06-2023 14:02:33.jpg", "weapon_images": ["weapon_30-06-2023 14:02:33.jpg"]}, url:http://localhost:5001/consumeevent
+2023-06-30 14:02:33 : INFO : do_restful : 31 - response: <Response [200]>
+2023-06-30 14:02:33 : INFO : detect : 338 - After fetching img
+2023-06-30 14:02:33 : WARNING : detect : 376 - Gun : 0.79236585 Detected in Frame: 300
+2023-06-30 14:02:36 : INFO : detect : 272 - Frame #: 400
+2023-06-30 14:02:36 : INFO : inference_images_weapon : 57 - started weapon inference
+2023-06-30 14:02:38 : INFO : inference_images_weapon : 87 - fps after inference: 0.7464586273168751
+2023-06-30 14:02:38 : INFO : inference_images_weapon : 145 - Ended weapon inference
+2023-06-30 14:02:38 : INFO : detect : 278 - FPS01: 0.74
+2023-06-30 14:02:38 : INFO : detect : 338 - After fetching img
+2023-06-30 14:02:41 : INFO : detect : 272 - Frame #: 500
+2023-06-30 14:02:41 : INFO : inference_images_weapon : 57 - started weapon inference
+2023-06-30 14:02:42 : INFO : inference_images_weapon : 87 - fps after inference: 0.9900922413931481
+2023-06-30 14:02:42 : INFO : inference_images_weapon : 145 - Ended weapon inference
+2023-06-30 14:02:42 : INFO : detect : 278 - FPS01: 0.99
+2023-06-30 14:02:42 : INFO : detect : 338 - After fetching img
+2023-06-30 14:02:46 : INFO : detect : 272 - Frame #: 600
+2023-06-30 14:02:46 : INFO : inference_images_weapon : 57 - started weapon inference
+2023-06-30 14:02:47 : INFO : inference_images_weapon : 87 - fps after inference: 0.9634160431369622
+2023-06-30 14:02:47 : INFO : inference_images_weapon : 145 - Ended weapon inference
+2023-06-30 14:02:47 : INFO : detect : 278 - FPS01: 0.96
+2023-06-30 14:02:47 : INFO : detect : 338 - After fetching img
+2023-06-30 14:02:51 : INFO : detect : 272 - Frame #: 700
+2023-06-30 14:02:51 : INFO : inference_images_weapon : 57 - started weapon inference
+2023-06-30 14:02:52 : INFO : inference_images_weapon : 87 - fps after inference: 0.8561958549977984
+2023-06-30 14:02:52 : INFO : inference_images_weapon : 145 - Ended weapon inference
+2023-06-30 14:02:52 : INFO : detect : 278 - FPS01: 0.85
+2023-06-30 14:02:52 : INFO : detect : 338 - After fetching img
+2023-06-30 14:02:56 : INFO : detect : 272 - Frame #: 800
+2023-06-30 14:02:56 : INFO : inference_images_weapon : 57 - started weapon inference
+2023-06-30 14:02:57 : INFO : inference_images_weapon : 87 - fps after inference: 0.9897980783639545
+2023-06-30 14:02:57 : INFO : inference_images_weapon : 145 - Ended weapon inference
+2023-06-30 14:02:57 : INFO : detect : 278 - FPS01: 0.99
+2023-06-30 14:02:57 : INFO : detect : 338 - After fetching img
+2023-06-30 14:03:01 : INFO : detect : 272 - Frame #: 900
+2023-06-30 14:03:01 : INFO : inference_images_weapon : 57 - started weapon inference
+2023-06-30 14:03:02 : INFO : inference_images_weapon : 87 - fps after inference: 0.9623956361710627
+2023-06-30 14:03:02 : INFO : inference_images_weapon : 145 - Ended weapon inference
+2023-06-30 14:03:02 : INFO : detect : 278 - FPS01: 0.96
+2023-06-30 14:03:02 : INFO : detect : 338 - After fetching img
+2023-06-30 14:03:06 : INFO : detect : 272 - Frame #: 1000
+2023-06-30 14:03:06 : INFO : inference_images_weapon : 57 - started weapon inference
+2023-06-30 14:03:07 : INFO : inference_images_weapon : 87 - fps after inference: 0.9787963824030114
+2023-06-30 14:03:07 : INFO : inference_images_weapon : 145 - Ended weapon inference
+2023-06-30 14:03:07 : INFO : detect : 278 - FPS01: 0.97
+2023-06-30 14:03:07 : INFO : detect : 338 - After fetching img
+2023-06-30 14:03:11 : INFO : detect : 272 - Frame #: 1100
+2023-06-30 14:03:11 : INFO : inference_images_weapon : 57 - started weapon inference
+2023-06-30 14:03:13 : INFO : inference_images_weapon : 87 - fps after inference: 0.7617946100671653
+2023-06-30 14:03:13 : INFO : inference_images_weapon : 145 - Ended weapon inference
+2023-06-30 14:03:13 : INFO : detect : 278 - FPS01: 0.76
+2023-06-30 14:03:13 : INFO : detect : 338 - After fetching img
+2023-06-30 14:03:16 : INFO : detect : 272 - Frame #: 1200
+2023-06-30 14:03:16 : INFO : inference_images_weapon : 57 - started weapon inference
+2023-06-30 14:03:18 : INFO : inference_images_weapon : 87 - fps after inference: 0.7857397632685604
+2023-06-30 14:03:18 : INFO : inference_images_weapon : 145 - Ended weapon inference
+2023-06-30 14:03:18 : INFO : detect : 278 - FPS01: 0.78
+2023-06-30 14:03:18 : INFO : detect : 338 - After fetching img
+2023-06-30 14:03:21 : INFO : detect : 272 - Frame #: 1300
+2023-06-30 14:03:21 : INFO : inference_images_weapon : 57 - started weapon inference
+2023-06-30 14:03:22 : INFO : inference_images_weapon : 87 - fps after inference: 0.8539504459602968
+2023-06-30 14:03:22 : INFO : inference_images_weapon : 145 - Ended weapon inference
+2023-06-30 14:03:22 : INFO : detect : 278 - FPS01: 0.85
+2023-06-30 14:03:22 : INFO : detect : 338 - After fetching img
+2023-06-30 14:03:26 : INFO : detect : 272 - Frame #: 1400
+2023-06-30 14:03:26 : INFO : inference_images_weapon : 57 - started weapon inference
+2023-06-30 14:03:27 : INFO : inference_images_weapon : 87 - fps after inference: 0.850241107171266
+2023-06-30 14:03:27 : INFO : inference_images_weapon : 145 - Ended weapon inference
+2023-06-30 14:03:27 : INFO : detect : 278 - FPS01: 0.85
+2023-06-30 14:03:27 : INFO : detect : 338 - After fetching img
+2023-06-30 14:03:31 : INFO : detect : 272 - Frame #: 1500
+2023-06-30 14:03:31 : INFO : inference_images_weapon : 57 - started weapon inference
+2023-06-30 14:03:33 : INFO : inference_images_weapon : 87 - fps after inference: 0.7834093618664935
+2023-06-30 14:03:33 : INFO : inference_images_weapon : 145 - Ended weapon inference
+2023-06-30 14:03:33 : INFO : detect : 278 - FPS01: 0.78
+2023-06-30 14:03:33 : INFO : detect : 338 - After fetching img
+2023-06-30 14:03:36 : INFO : detect : 272 - Frame #: 1600
+2023-06-30 14:03:36 : INFO : inference_images_weapon : 57 - started weapon inference
+2023-06-30 14:03:37 : INFO : inference_images_weapon : 87 - fps after inference: 0.8412330772779237
+2023-06-30 14:03:37 : INFO : inference_images_weapon : 145 - Ended weapon inference
+2023-06-30 14:03:37 : INFO : detect : 278 - FPS01: 0.84
+2023-06-30 14:03:37 : INFO : detect : 338 - After fetching img
+2023-06-30 14:03:41 : INFO : detect : 272 - Frame #: 1700
+2023-06-30 14:03:41 : INFO : inference_images_weapon : 57 - started weapon inference
+2023-06-30 14:03:42 : INFO : inference_images_weapon : 87 - fps after inference: 0.9656180624254227
+2023-06-30 14:03:42 : INFO : inference_images_weapon : 145 - Ended weapon inference
+2023-06-30 14:03:42 : INFO : detect : 278 - FPS01: 0.96
+2023-06-30 14:03:42 : INFO : detect : 338 - After fetching img
+2023-06-30 14:03:46 : INFO : detect : 272 - Frame #: 1800
+2023-06-30 14:03:46 : INFO : inference_images_weapon : 57 - started weapon inference
+2023-06-30 14:03:47 : INFO : inference_images_weapon : 87 - fps after inference: 0.9583390359588716
+2023-06-30 14:03:47 : INFO : inference_images_weapon : 145 - Ended weapon inference
+2023-06-30 14:03:47 : INFO : detect : 278 - FPS01: 0.96
+2023-06-30 14:03:47 : INFO : detect : 338 - After fetching img
+2023-06-30 14:03:51 : INFO : detect : 272 - Frame #: 1900
+2023-06-30 14:03:51 : INFO : inference_images_weapon : 57 - started weapon inference
+2023-06-30 14:03:52 : INFO : inference_images_weapon : 87 - fps after inference: 0.8704273708606852
+2023-06-30 14:03:52 : INFO : inference_images_weapon : 145 - Ended weapon inference
+2023-06-30 14:03:52 : INFO : detect : 278 - FPS01: 0.87
+2023-06-30 14:03:52 : INFO : detect : 338 - After fetching img
+2023-06-30 14:03:56 : INFO : detect : 272 - Frame #: 2000
+2023-06-30 14:03:56 : INFO : inference_images_weapon : 57 - started weapon inference
+2023-06-30 14:03:57 : INFO : inference_images_weapon : 87 - fps after inference: 0.9717362027051416
+2023-06-30 14:03:57 : INFO : inference_images_weapon : 145 - Ended weapon inference
+2023-06-30 14:03:57 : INFO : detect : 278 - FPS01: 0.97
+2023-06-30 14:03:57 : INFO : detect : 338 - After fetching img
+2023-06-30 14:04:01 : INFO : detect : 272 - Frame #: 2100
+2023-06-30 14:04:01 : INFO : inference_images_weapon : 57 - started weapon inference
+2023-06-30 14:04:02 : INFO : inference_images_weapon : 87 - fps after inference: 0.9758781976366101
+2023-06-30 14:04:02 : INFO : inference_images_weapon : 145 - Ended weapon inference
+2023-06-30 14:04:02 : INFO : detect : 278 - FPS01: 0.97
+2023-06-30 14:04:02 : INFO : detect : 338 - After fetching img
+2023-06-30 14:04:06 : INFO : detect : 272 - Frame #: 2200
+2023-06-30 14:04:06 : INFO : inference_images_weapon : 57 - started weapon inference
+2023-06-30 14:04:07 : INFO : inference_images_weapon : 87 - fps after inference: 0.9352104862630569
+2023-06-30 14:04:07 : INFO : inference_images_weapon : 145 - Ended weapon inference
+2023-06-30 14:04:07 : INFO : detect : 278 - FPS01: 0.93
+2023-06-30 14:04:07 : INFO : detect : 338 - After fetching img
+2023-06-30 14:04:11 : INFO : detect : 272 - Frame #: 2300
+2023-06-30 14:04:11 : INFO : inference_images_weapon : 57 - started weapon inference
+2023-06-30 14:04:12 : INFO : inference_images_weapon : 87 - fps after inference: 0.9679594935774057
+2023-06-30 14:04:12 : INFO : inference_images_weapon : 145 - Ended weapon inference
+2023-06-30 14:04:12 : INFO : detect : 278 - FPS01: 0.97
+2023-06-30 14:04:12 : INFO : detect : 338 - After fetching img
+2023-06-30 14:04:16 : INFO : detect : 272 - Frame #: 2400
+2023-06-30 14:04:16 : INFO : inference_images_weapon : 57 - started weapon inference
+2023-06-30 14:04:17 : INFO : inference_images_weapon : 87 - fps after inference: 0.9875431194729907
+2023-06-30 14:04:17 : INFO : inference_images_weapon : 145 - Ended weapon inference
+2023-06-30 14:04:17 : INFO : detect : 278 - FPS01: 0.98
+2023-06-30 14:04:17 : INFO : detect : 338 - After fetching img
+2023-06-30 14:04:21 : INFO : detect : 272 - Frame #: 2500
+2023-06-30 14:04:21 : INFO : inference_images_weapon : 57 - started weapon inference
+2023-06-30 14:04:22 : INFO : inference_images_weapon : 87 - fps after inference: 0.9468997939276381
+2023-06-30 14:04:22 : INFO : inference_images_weapon : 145 - Ended weapon inference
+2023-06-30 14:04:22 : INFO : detect : 278 - FPS01: 0.94
+2023-06-30 14:04:22 : INFO : detect : 338 - After fetching img
+2023-06-30 14:04:26 : INFO : detect : 272 - Frame #: 2600
+2023-06-30 14:04:26 : INFO : inference_images_weapon : 57 - started weapon inference
+2023-06-30 14:04:27 : INFO : inference_images_weapon : 87 - fps after inference: 0.9018067293470804
+2023-06-30 14:04:27 : INFO : inference_images_weapon : 145 - Ended weapon inference
+2023-06-30 14:04:27 : INFO : detect : 278 - FPS01: 0.90
+2023-06-30 14:04:27 : INFO : detect : 338 - After fetching img
+2023-06-30 14:04:31 : INFO : detect : 272 - Frame #: 2700
+2023-06-30 14:04:31 : INFO : inference_images_weapon : 57 - started weapon inference
+2023-06-30 14:04:32 : INFO : inference_images_weapon : 87 - fps after inference: 0.8592886695409981
+2023-06-30 14:04:32 : INFO : inference_images_weapon : 145 - Ended weapon inference
+2023-06-30 14:04:32 : INFO : detect : 278 - FPS01: 0.86
+2023-06-30 14:04:32 : INFO : detect : 338 - After fetching img
+2023-06-30 14:04:36 : INFO : detect : 272 - Frame #: 2800
+2023-06-30 14:04:36 : INFO : inference_images_weapon : 57 - started weapon inference
+2023-06-30 14:04:37 : INFO : inference_images_weapon : 87 - fps after inference: 0.8800601100016388
+2023-06-30 14:04:37 : INFO : inference_images_weapon : 145 - Ended weapon inference
+2023-06-30 14:04:37 : INFO : detect : 278 - FPS01: 0.88
+2023-06-30 14:04:37 : INFO : detect : 338 - After fetching img
+2023-06-30 14:04:41 : INFO : detect : 272 - Frame #: 2900
+2023-06-30 14:04:41 : INFO : inference_images_weapon : 57 - started weapon inference
+2023-06-30 14:04:42 : INFO : inference_images_weapon : 87 - fps after inference: 0.9545593061762612
+2023-06-30 14:04:42 : INFO : inference_images_weapon : 145 - Ended weapon inference
+2023-06-30 14:04:42 : INFO : detect : 278 - FPS01: 0.95
+2023-06-30 14:04:42 : INFO : detect : 338 - After fetching img
+2023-06-30 14:04:46 : INFO : detect : 272 - Frame #: 3000
+2023-06-30 14:04:46 : INFO : inference_images_weapon : 57 - started weapon inference
+2023-06-30 14:04:47 : INFO : inference_images_weapon : 87 - fps after inference: 0.9283146887073414
+2023-06-30 14:04:47 : INFO : inference_images_weapon : 145 - Ended weapon inference
+2023-06-30 14:04:47 : INFO : detect : 278 - FPS01: 0.93
+2023-06-30 14:04:47 : INFO : detect : 338 - After fetching img
+2023-06-30 14:04:51 : INFO : detect : 272 - Frame #: 3100
+2023-06-30 14:04:51 : INFO : inference_images_weapon : 57 - started weapon inference
+2023-06-30 14:04:52 : INFO : inference_images_weapon : 87 - fps after inference: 0.8626564891273877
+2023-06-30 14:04:52 : INFO : inference_images_weapon : 145 - Ended weapon inference
+2023-06-30 14:04:52 : INFO : detect : 278 - FPS01: 0.86
+2023-06-30 14:04:52 : INFO : detect : 338 - After fetching img
+2023-06-30 14:04:56 : INFO : detect : 272 - Frame #: 3200
+2023-06-30 14:04:56 : INFO : inference_images_weapon : 57 - started weapon inference
+2023-06-30 14:04:57 : INFO : inference_images_weapon : 87 - fps after inference: 0.8394810085691309
+2023-06-30 14:04:57 : INFO : inference_images_weapon : 145 - Ended weapon inference
+2023-06-30 14:04:57 : INFO : detect : 278 - FPS01: 0.84
+2023-06-30 14:04:57 : INFO : detect : 338 - After fetching img
+2023-06-30 14:05:01 : INFO : detect : 272 - Frame #: 3300
+2023-06-30 14:05:01 : INFO : inference_images_weapon : 57 - started weapon inference
+2023-06-30 14:05:02 : INFO : inference_images_weapon : 87 - fps after inference: 0.9658466469197505
+2023-06-30 14:05:02 : INFO : inference_images_weapon : 145 - Ended weapon inference
+2023-06-30 14:05:02 : INFO : detect : 278 - FPS01: 0.96
+2023-06-30 14:05:02 : INFO : detect : 338 - After fetching img
+2023-06-30 14:05:06 : INFO : detect : 272 - Frame #: 3400
+2023-06-30 14:05:06 : INFO : inference_images_weapon : 57 - started weapon inference
+2023-06-30 14:05:07 : INFO : inference_images_weapon : 87 - fps after inference: 0.9823945360899596
+2023-06-30 14:05:07 : INFO : inference_images_weapon : 145 - Ended weapon inference
+2023-06-30 14:05:07 : INFO : detect : 278 - FPS01: 0.98
+2023-06-30 14:05:07 : INFO : detect : 338 - After fetching img
+2023-06-30 14:05:11 : INFO : detect : 272 - Frame #: 3500
+2023-06-30 14:05:11 : INFO : inference_images_weapon : 57 - started weapon inference
+2023-06-30 14:05:12 : INFO : inference_images_weapon : 87 - fps after inference: 0.9089329891456043
+2023-06-30 14:05:12 : INFO : inference_images_weapon : 145 - Ended weapon inference
+2023-06-30 14:05:12 : INFO : detect : 278 - FPS01: 0.90
+2023-06-30 14:05:12 : INFO : detect : 338 - After fetching img
+2023-06-30 14:05:16 : INFO : detect : 272 - Frame #: 3600
+2023-06-30 14:05:16 : INFO : inference_images_weapon : 57 - started weapon inference
+2023-06-30 14:05:17 : INFO : inference_images_weapon : 87 - fps after inference: 0.8924030177801712
+2023-06-30 14:05:17 : INFO : inference_images_weapon : 145 - Ended weapon inference
+2023-06-30 14:05:17 : INFO : detect : 278 - FPS01: 0.89
+2023-06-30 14:05:17 : INFO : detect : 338 - After fetching img
+2023-06-30 14:05:21 : INFO : detect : 272 - Frame #: 3700
+2023-06-30 14:05:21 : INFO : inference_images_weapon : 57 - started weapon inference
+2023-06-30 14:05:22 : INFO : inference_images_weapon : 87 - fps after inference: 0.8890516791133359
+2023-06-30 14:05:22 : INFO : inference_images_weapon : 145 - Ended weapon inference
+2023-06-30 14:05:22 : INFO : detect : 278 - FPS01: 0.88
+2023-06-30 14:05:22 : INFO : detect : 338 - After fetching img
+2023-06-30 14:05:26 : INFO : detect : 272 - Frame #: 3800
+2023-06-30 14:05:26 : INFO : inference_images_weapon : 57 - started weapon inference
+2023-06-30 14:05:28 : INFO : inference_images_weapon : 87 - fps after inference: 0.6310148553058725
+2023-06-30 14:05:28 : INFO : inference_images_weapon : 145 - Ended weapon inference
+2023-06-30 14:05:28 : INFO : detect : 278 - FPS01: 0.63
+2023-06-30 14:05:28 : INFO : detect : 338 - After fetching img
+2023-06-30 14:05:31 : INFO : detect : 272 - Frame #: 3900
+2023-06-30 14:05:31 : INFO : inference_images_weapon : 57 - started weapon inference
+2023-06-30 14:05:32 : INFO : inference_images_weapon : 87 - fps after inference: 0.9780602976874772
+2023-06-30 14:05:32 : INFO : inference_images_weapon : 145 - Ended weapon inference
+2023-06-30 14:05:32 : INFO : detect : 278 - FPS01: 0.97
+2023-06-30 14:05:32 : INFO : detect : 338 - After fetching img
+2023-06-30 14:05:36 : INFO : detect : 272 - Frame #: 4000
+2023-06-30 14:05:36 : INFO : inference_images_weapon : 57 - started weapon inference
+2023-06-30 14:05:37 : INFO : inference_images_weapon : 87 - fps after inference: 0.9492807580659252
+2023-06-30 14:05:37 : INFO : inference_images_weapon : 145 - Ended weapon inference
+2023-06-30 14:05:37 : INFO : detect : 278 - FPS01: 0.95
+2023-06-30 14:05:37 : INFO : detect : 338 - After fetching img
+2023-06-30 14:05:41 : INFO : detect : 272 - Frame #: 4100
+2023-06-30 14:05:41 : INFO : inference_images_weapon : 57 - started weapon inference
+2023-06-30 14:05:42 : INFO : inference_images_weapon : 87 - fps after inference: 0.9482448229562611
+2023-06-30 14:05:42 : INFO : inference_images_weapon : 145 - Ended weapon inference
+2023-06-30 14:05:42 : INFO : detect : 278 - FPS01: 0.95
+2023-06-30 14:05:42 : INFO : detect : 338 - After fetching img
+2023-06-30 14:05:46 : INFO : detect : 272 - Frame #: 4200
+2023-06-30 14:05:46 : INFO : inference_images_weapon : 57 - started weapon inference
+2023-06-30 14:05:47 : INFO : inference_images_weapon : 87 - fps after inference: 0.9816413145082811
+2023-06-30 14:05:47 : INFO : inference_images_weapon : 145 - Ended weapon inference
+2023-06-30 14:05:47 : INFO : detect : 278 - FPS01: 0.98
+2023-06-30 14:05:47 : INFO : detect : 338 - After fetching img
+2023-06-30 14:05:51 : INFO : detect : 272 - Frame #: 4300
+2023-06-30 14:05:51 : INFO : inference_images_weapon : 57 - started weapon inference
+2023-06-30 14:05:52 : INFO : inference_images_weapon : 87 - fps after inference: 0.8479506615011602
+2023-06-30 14:05:52 : INFO : inference_images_weapon : 145 - Ended weapon inference
+2023-06-30 14:05:52 : INFO : detect : 278 - FPS01: 0.84
+2023-06-30 14:05:52 : INFO : detect : 338 - After fetching img
+2023-06-30 14:05:56 : INFO : detect : 272 - Frame #: 4400
+2023-06-30 14:05:56 : INFO : inference_images_weapon : 57 - started weapon inference
+2023-06-30 14:05:57 : INFO : inference_images_weapon : 87 - fps after inference: 0.9229281061629262
+2023-06-30 14:05:57 : INFO : inference_images_weapon : 145 - Ended weapon inference
+2023-06-30 14:05:57 : INFO : detect : 278 - FPS01: 0.92
+2023-06-30 14:05:57 : INFO : detect : 338 - After fetching img
+2023-06-30 14:06:01 : INFO : detect : 272 - Frame #: 4500
+2023-06-30 14:06:01 : INFO : inference_images_weapon : 57 - started weapon inference
+2023-06-30 14:06:02 : INFO : inference_images_weapon : 87 - fps after inference: 0.9620369299988807
+2023-06-30 14:06:02 : INFO : inference_images_weapon : 145 - Ended weapon inference
+2023-06-30 14:06:02 : INFO : detect : 278 - FPS01: 0.96
+2023-06-30 14:06:02 : INFO : detect : 338 - After fetching img
+2023-06-30 14:06:06 : INFO : detect : 272 - Frame #: 4600
+2023-06-30 14:06:06 : INFO : inference_images_weapon : 57 - started weapon inference
+2023-06-30 14:06:07 : INFO : inference_images_weapon : 87 - fps after inference: 0.9494907100856268
+2023-06-30 14:06:07 : INFO : inference_images_weapon : 145 - Ended weapon inference
+2023-06-30 14:06:07 : INFO : detect : 278 - FPS01: 0.95
+2023-06-30 14:06:07 : INFO : detect : 338 - After fetching img
+2023-06-30 14:06:11 : INFO : detect : 272 - Frame #: 4700
+2023-06-30 14:06:11 : INFO : inference_images_weapon : 57 - started weapon inference
+2023-06-30 14:06:12 : INFO : inference_images_weapon : 87 - fps after inference: 0.970701249577345
+2023-06-30 14:06:12 : INFO : inference_images_weapon : 145 - Ended weapon inference
+2023-06-30 14:06:12 : INFO : detect : 278 - FPS01: 0.97
+2023-06-30 14:06:12 : INFO : detect : 338 - After fetching img
+2023-06-30 14:06:16 : INFO : detect : 272 - Frame #: 4800
+2023-06-30 14:06:16 : INFO : inference_images_weapon : 57 - started weapon inference
+2023-06-30 14:06:17 : INFO : inference_images_weapon : 87 - fps after inference: 0.8929863074711818
+2023-06-30 14:06:17 : INFO : inference_images_weapon : 145 - Ended weapon inference
+2023-06-30 14:06:17 : INFO : detect : 278 - FPS01: 0.89
+2023-06-30 14:06:17 : INFO : detect : 338 - After fetching img
+2023-06-30 14:06:21 : INFO : detect : 272 - Frame #: 4900
+2023-06-30 14:06:21 : INFO : inference_images_weapon : 57 - started weapon inference

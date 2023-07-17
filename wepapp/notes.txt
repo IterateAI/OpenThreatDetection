@@ -1,0 +1,222 @@
+
+rtsp://admin:Other098@192.168.8.141:554
+rtsp://admin:iterate411@<camera ip>
+rtsp://wowzaec2demo.streamlock.net/vod/mp4:BigBuckBunny_115k.mp4
+
+TODO
+	check thumbnail creation
+	rest/raptor/pub-sub external interface
+		zip up results
+	check out execution of darknet software
+
+	DONE
+		authors: Balasundram Arunn, Chatura Samarasinghe, Reed McCauley
+		add MIT license
+		help page with versioning
+		accuracy score - compare to what - shown on event lines
+		cleanup rmm debug statements
+		mypy used for static code analysis
+		video_url removal
+		use mp4-frame-size.py to show total number of frames while processing
+		put stream (rtsp) read timeout: default 60 secs
+		refactor Multiprocess_python.py name
+		overall result status - seems to be missing from json
+			"Threat_status": "Threat detected | Weapon:['Gun']"
+
+MIT license
+	https://choosealicense.com/licenses/mit/#
+
+	--------
+	MIT License
+
+	Copyright (c) [year] [fullname]
+
+	Permission is hereby granted, free of charge, to any person obtaining a copy
+	of this software and associated documentation files (the "Software"), to deal
+	in the Software without restriction, including without limitation the rights
+	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+	copies of the Software, and to permit persons to whom the Software is
+	furnished to do so, subject to the following conditions:
+
+	The above copyright notice and this permission notice shall be included in all
+	copies or substantial portions of the Software.
+
+	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+	SOFTWARE.
+	----------
+
+[h264 @ 0x7fd29a21fc00] decode_slice_header error
+[h264 @ 0x7fd29a21fc00] no frame!
+[h264 @ 0x7fd29a21fc00] non-existing PPS 0 referenced
+[h264 @ 0x7fd29a21fc00] non-existing PPS 0 referenced
+[h264 @ 0x7fd29a21fc00] decode_slice_header error
+[h264 @ 0x7fd29a21fc00] no frame!
+[h264 @ 0x7fd29a21fc00] non-existing PPS 0 referenced
+[h264 @ 0x7fd29a21fc00] non-existing PPS 0 referenced
+[h264 @ 0x7fd29a21fc00] decode_slice_header error
+[h264 @ 0x7fd29a21fc00] no frame!
+[h264 @ 0x7fd29a21fc00] non-existing PPS 0 referenced
+[h264 @ 0x7fd29a21fc00] non-existing PPS 0 referenced
+[h264 @ 0x7fd29a21fc00] decode_slice_header error
+[h264 @ 0x7fd29a21fc00] no frame!
+[h264 @ 0x7fd29a21fc00] non-existing PPS 0 referenced
+[h264 @ 0x7fd29a21fc00] non-existing PPS 0 referenced
+[h264 @ 0x7fd29a21fc00] decode_slice_header error
+[h264 @ 0x7fd29a21fc00] no frame!
+[h264 @ 0x7fd29a21fc00] non-existing PPS 0 referenced
+[h264 @ 0x7fd29a21fc00] non-existing PPS 0 referenced
+[h264 @ 0x7fd29a21fc00] decode_slice_header error
+[h264 @ 0x7fd29a21fc00] no frame!
+[h264 @ 0x7fd29a21fc00] non-existing PPS 0 referenced
+[h264 @ 0x7fd29a21fc00] non-existing PPS 0 referenced
+[h264 @ 0x7fd29a21fc00] decode_slice_header error
+[h264 @ 0x7fd29a21fc00] no frame!
+
+True
+True
+Frame #:  3000
+started weapon inference
+fps after inference:  1.594029322084979
+inside inference
+FPS01: 1.59
+after img
+after after... 1
+after after... 2
+after after... 3
+True
+True
+
+Logging:
+	https://docs.python.org/3/howto/logging.html
+	https://www.toptal.com/python/in-depth-python-logging
+	https://coderzcolumn.com/tutorials/python/logging-config-simple-guide-to-configure-loggers-from-dictionary-and-config-files-in-python
+
+
+Weapon_detection.js with Python extraction point
+	NOTE: attempts: 10 - ??? what's this for ???
+	self.func = {
+	            code: `
+	#run only one video at a time. stop processing video when press stop and save the video which is processed until
+	from platform import python_version
+	import multiprocessing
+	...
+	`,
+	            attempts: 10
+	        };
+
+Install GPUtil
+	base) ReedMcCleysMBP2:wep reed$ pip install GPUtil
+	Collecting GPUtil
+	  Downloading GPUtil-1.4.0.tar.gz (5.5 kB)
+	Building wheels for collected packages: GPUtil
+	  Building wheel for GPUtil (setup.py) ... done
+	  Created wheel for GPUtil: filename=GPUtil-1.4.0-py3-none-any.whl size=7409 sha256=87b98e69c459afcf42debaf360c79c0e27eb8dde976cc21547e37749a0a266b9
+	  Stored in directory: /Users/reed/Library/Caches/pip/wheels/ba/03/bb/7a97840eb54479b328672e15a536e49dc60da200fb21564d53
+	Successfully built GPUtil
+	Installing collected packages: GPUtil
+	Successfully installed GPUtil-1.4.0
+
+Install EasyDict
+	base) ReedMcCleysMBP2:redo reed$ pip install easydict
+	Collecting easydict
+	  Downloading easydict-1.10.tar.gz (6.4 kB)
+	Building wheels for collected packages: easydict
+	  Building wheel for easydict (setup.py) ... done
+	  Created wheel for easydict: filename=easydict-1.10-py3-none-any.whl size=6497 sha256=7998bda3adf0fa0ad69973e998095b5e6ff5c1364863ac1de8554e0317e37ba6
+	  Stored in directory: /Users/reed/Library/Caches/pip/wheels/fe/4e/02/c9c3154e4845bfdbf1fdf344f5a89f16dcbb4f627a908c9974
+	Successfully built easydict
+	Installing collected packages: easydict
+	Successfully installed easydict-1.10
+
+For RTSP - do we want to {stream-some} {do some work} {repeat} OR {stream all} {do all work}
+Javascript Weapon_detection.js tries 10 times to execute embedded Python
+#            attempts: 10
+
+# old weapon weights references
+	#weights_weapon = '/Users/reed/Stuff/ereed/customers/iterate/wep/redo/weaponresource/checkpoints_weapon/WeaponOct7_608_6000/'
+	# rmm weights_weapon = '/interplay_v2/public/private/weaponresource/checkpoints_weapon/yolo_weapon090622_608/'
+	#weights_weapon = '/interplay_v2/public/private/weaponresource/checkpoints_weapon/Aug24_8000/'
+	#weights_weapon = '/interplay_v2/public/private/weaponresource/checkpoints_weapon/yolo_weapon1711_best_416'
+	#output_format = 'XVID'
+	output_format = 'vp80' #for webm
+
+How important is this:
+	# comment out below line to enable tensorflow outputs
+	#os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+
+What's satisfying this import. 
+	NOTE: pip list, conda list doesn't show it
+	import multiprocessing
+
+relative/absolute path stuff - paths are relative using "."
+	read_class_names
+	import // core and data to wepcore and wepdata
+
+DONE - Deprecate NoOfProcesses
+
+rename python_function
+
+VIDEO_LINK or FILE_NAME - pick one
+remove rmm comments
+
+Integrate relative path info (from config.py). others. are they used?
+	__C.TEST.ANNOT_PATH           = "./wepdata/dataset/val2017.txt"
+
+2023-02-13 14:15:09.596200: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+imported packages within inference_images_weapon
+loading weapon model:  tf
+loaded weapon model
+msg_local_py[payload]: {'video_link': '/Users/reed/Stuff/ereed/customers/iterate/wep/redo/wepcache/AR_15.mp4', 'video_url': '', 'building': 'Building A', 'video_type': 'mp4', 'friendly_name': 'a friendly name', 'file_original_name': 'AR_15.mp4'}
+video URL: /Users/reed/Stuff/ereed/customers/iterate/wep/redo/wepcache/AR_15.mp4
+building: Building A
+video Type: mp4
+Friendly name: a friendly name
+Original name: AR_15.mp4
+Begin video capture now
+video  <VideoCapture 0x7fe8bc4dde10>
+Reading video frame
+Reading video frame
+Reading video frame
+Reading video frame
+Reading video frame
+Frame #:  5
+started weapon inference
+2023-02-13 14:15:23.161056: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:185] None of the MLIR Optimization Passes are enabled (registered 2)
+fps after inference:  0.7239363403338116
+inside inference
+FPS01: 0.72
+after img
+FPS02: 0.65
+Reading video frame
+Reading video frame
+Reading video frame
+Reading video frame
+Reading video frame
+Frame #:  10
+started weapon inference
+fps after inference:  1.5775206437502702
+inside inference
+FPS01: 1.56
+after sending the input
+Process exception occurred in  video inferencing : [Errno 2] No such file or directory: '/Users/reed/Stuff/ereed/customers/iterate/wep/redo/weaponresource/a friendly name/a friendly name_weapon.json'
+Passing close() missing 1 required positional argument: 'self' Exception caused
+Reading the Node's input started
+No of processes when no of processes is not given :  3
+video_ext mp4
+friendly_name a friendly name
+Python function started. Detection for video
+before multiprocessing starts : 
+| ID | GPU | MEM |
+------------------
+/Users/reed/Stuff/ereed/learn/anaconda/anaconda3/lib/python3.8/site-packages/tensorflow/python/client/session.py:1766: UserWarning: An interactive session is already active. This can cause out-of-memory errors in some cases. You must explicitly call `InteractiveSession.close()` to release resources held by the other session(s).
+  warnings.warn('An interactive session is already active. This can '
+msg_local_py[payload]: {'video_link': '/Users/reed/Stuff/ereed/customers/iterate/wep/redo/wepcache/AR_15.mp4', 'video_url': '', 'building': 'Building A', 'video_type': 'mp4', 'friendly_name': 'a friendly name', 'file_original_name': 'AR_15.mp4'}
+video URL: /Users/reed/Stuff/ereed/customers/iterate/wep/redo/wepcache/AR_15.mp4
+building: Building A
+video Type: mp4

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wep Webhook Consumer</title>
+    <style>
+        h2 {
+            width: 100%;
+        }
+
+        .title {
+            margin: 5px;
+            width: 100%;
+        }
+
+        .content {
+            margin: 5px;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .post {
+            flex: 20%;
+            padding: 10px;
+            margin: 5px;
+            background-color: #f3f3f3;
+            inline-size: 100%;
+        }
+
+        .title a {
+            color: #00a36f;
+            text-decoration: none;
+        }
+
+        nav a {
+            color: #d64161;
+            font-size: 2.5em;
+            margin-left: 250px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="">Wep Events Viewer</a>
+    </nav>
+    <div id="Events" style="height:800px;width:70%; border:1px solid gray; overflow-y:scroll;">
+        <table id='eventsTable'>
+            <tr>
+                <th>Camera</th>
+                <th>Date/Time</th>
+                <th>Status</th>
+                <th>Image Path</th>
+            </tr>
+        </table>
+    </div>
+    <script type="module">
+        import { io } from "https://cdn.socket.io/4.4.1/socket.io.esm.min.js";
+        const ios = io();
+        console.log('domain:' + document.domain + ', port:' + location.port);
+        var url = 'http://' + document.domain + ':' + location.port;
+        console.log('the url: ' + url);
+        var socket = ios.connect(url);
+        socket.on('connect', function() {
+                console.log('connected 5');
+            }
+        );
+        socket.on('msg' , function(data) {
+            var msg = JSON.parse(data);
+            console.log('new event received from ' + msg.video_name);
+
+            var tableRef = document.getElementById('eventsTable').getElementsByTagName('tbody')[0];
+
+            var newRow = tableRef.insertRow(1);
+
+            var newCell = newRow.insertCell();
+            var newText = document.createTextNode('* ' + msg.video_name);
+            newCell.appendChild(newText);
+
+            var newCell = newRow.insertCell();
+            var newText = document.createTextNode('* ' + msg.datetime);
+            newCell.appendChild(newText);
+
+            var index = msg.status.indexOf(": ") + 2;
+            var accuracy = Math.round(Number.parseFloat(msg.status.substring(index)) * 100);
+
+            var newCell = newRow.insertCell();
+            var newText = document.createTextNode('* ' + msg.status.substring(0, index) + ' ' + accuracy + '%');
+            newCell.appendChild(newText);
+
+            var newCell = newRow.insertCell();
+            var newText = document.createTextNode('* ' + msg.image_path);
+            newCell.appendChild(newText);
+        });
+    </script>
+</body>
+</html>

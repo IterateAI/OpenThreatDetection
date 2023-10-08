@@ -1,0 +1,13 @@
+flask
+flask_restful
+pandas
+pillow
+GPUtil
+tensorflow
+paho-mqtt
+pymongo
+opencv-python
+easydict
+paho-mqtt
+flask_socketio
+flask_cors

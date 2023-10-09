@@ -1,0 +1,14 @@
+2023-10-09 18:51:35 : INFO : <module> : 30 - Setup complete (v1.0)
+2023-10-09 18:51:35 : INFO : <module> : 39 - No GPU devices found
+2023-10-09 18:51:35 : INFO : <module> : 50 - Input request: {'video_link': 'rtsp://backend2.interplay.iterate.ai/test5.sdp', 'building': 'room', 'video_type': 'rtsp', 'friendly_name': 'room', 'file_original_name': None}
+2023-10-09 18:51:35 : INFO : <module> : 58 - Detection for video stream starts...
+2023-10-09 18:51:35 : INFO : <module> : 62 - GPU Utilization before: 
+2023-10-09 18:51:35 : INFO : <module> : 23 - imported packages within inference_images_weapon
+2023-10-09 18:51:35 : INFO : <module> : 41 - loading weapon model: tf
+2023-10-09 18:51:53 : INFO : <module> : 50 - loaded weapon model
+2023-10-09 18:51:53 : INFO : detect : 50 - Video source: rtsp://backend2.interplay.iterate.ai/test5.sdp
+2023-10-09 18:51:53 : INFO : detect : 71 - msg_local_py[payload]: {'video_link': 'rtsp://backend2.interplay.iterate.ai/test5.sdp', 'building': 'room', 'video_type': 'rtsp', 'friendly_name': 'room', 'file_original_name': None}
+2023-10-09 18:51:53 : INFO : detect : 134 - Begin video capture now: rtsp://backend2.interplay.iterate.ai/test5.sdp
+2023-10-09 18:51:53 : INFO : detect : 145 - Within reading path
+2023-10-09 18:53:05 : WARNING : detect : 187 - room folder removed
+2023-10-09 18:53:05 : WARNING : detect : 191 - room folder created

@@ -1,4 +1,4 @@
 #!/bin/sh
 echo "ARG: $1"
 cd wepapp
-python wep.py ../$1
+python3 wep.py ../$1

@@ -17,3 +17,8 @@ build/
 .idea/
 docs/_build/
 .vscode
+
+wepapp/interface/*.webm
+wepapp/interface/*.json
+wepapp/interface/*.jpg
+

@@ -307,9 +307,11 @@ def detect(msg_py,msg_local_py,msg_passing):
                                     time_taking = frame_num/fps         #calculate the video time
                                     image1_write = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
                                     image_capture_path = 'weapon_'+str(round(time_taking,2))+'.jpg'
+                                    now = datetime.now()
+                                    dt_string = now.strftime("%d-%m-%Y %H:%M:%S")
                                     cv2.imwrite(cfg.output_path + video_name + '/' + image_capture_path, image1_write)
                                     weapon_arr.append(image_capture_path)
-                                    data_weapon = {'status':detection_type_weapon,'video_name':video_name1,'time(s)':str(round(time_taking,2)),'Threat_status':threat_status,'image_path':image_capture_path,'weapon_images':weapon_arr}
+                                    data_weapon = {'status':detection_type_weapon,'video_name':video_name1,'datetime':dt_string,'time(s)':str(round(time_taking,2)),'Threat_status':threat_status,'image_path':image_capture_path,'weapon_images':weapon_arr}
                                 elif (video_ext in ['rtsp','mjpeg']):
                                     now = datetime.now()
                                     dt_string = now.strftime("%d-%m-%Y %H:%M:%S")

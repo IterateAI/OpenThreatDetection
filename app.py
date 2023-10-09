@@ -9,7 +9,6 @@ from test.test import test_bp
 from camera.routes import camera_bp
 from event.routes import event_bp
 
-import event.event as events
 from extenstions import db
 
 from flask_cors import CORS
@@ -28,6 +27,8 @@ db.init_app(app)
 from camera import models
 with app.app_context():
 	db.create_all()
+
+app.debug=True
 
 @app.route("/")
 def home():	
@@ -62,6 +63,7 @@ signal.signal(signal.SIGINT, signal_handler)
 signal.signal(signal.SIGTERM, signal_handler)
 
 from  camera import camera as cameras
+import event.event as events
 if __name__ == "__main__":
     
 	cameras.init()
@@ -75,9 +77,8 @@ if __name__ == "__main__":
 	web_hook = mp.Process(target=start_webhook, args=())
 	web_hooks.append(web_hook)
 	web_hook.start()
-	# subprocess.run(["./web_hook.sh"],check=True)
 	print(events.events_to_json())
 	events.init()
 	for event in events.get_events():
 		print(f"event status: {event.status}, video name: {event.video_name}, threat: {event.Threat_status}, path: {event.image_path}, images: {event.weapon_images[0]}")
-	app.run(debug=True)
+	app.run()

@@ -127,7 +127,7 @@ const Notifications = () => {
                             </Link>
 
                             <div className='px-3.5 pt-2'>
-                                <p className='font-semibold text-sm'>{getTimeDelay(item.datetime)} Ago</p>
+                                <p className='font-semibold text-sm'>{getTimeDelay(item.date_time)} Ago</p>
                                 <h5 className='font-semibold text-lg'>{item.video_name}</h5>
                                 <h6 className='font-semibold text-sm text-black-600'>{item.duration}</h6>
                             </div>

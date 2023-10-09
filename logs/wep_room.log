@@ -1,14 +1,94 @@
-2023-10-09 18:51:35 : INFO : <module> : 30 - Setup complete (v1.0)
-2023-10-09 18:51:35 : INFO : <module> : 39 - No GPU devices found
-2023-10-09 18:51:35 : INFO : <module> : 50 - Input request: {'video_link': 'rtsp://backend2.interplay.iterate.ai/test5.sdp', 'building': 'room', 'video_type': 'rtsp', 'friendly_name': 'room', 'file_original_name': None}
-2023-10-09 18:51:35 : INFO : <module> : 58 - Detection for video stream starts...
-2023-10-09 18:51:35 : INFO : <module> : 62 - GPU Utilization before: 
-2023-10-09 18:51:35 : INFO : <module> : 23 - imported packages within inference_images_weapon
-2023-10-09 18:51:35 : INFO : <module> : 41 - loading weapon model: tf
-2023-10-09 18:51:53 : INFO : <module> : 50 - loaded weapon model
-2023-10-09 18:51:53 : INFO : detect : 50 - Video source: rtsp://backend2.interplay.iterate.ai/test5.sdp
-2023-10-09 18:51:53 : INFO : detect : 71 - msg_local_py[payload]: {'video_link': 'rtsp://backend2.interplay.iterate.ai/test5.sdp', 'building': 'room', 'video_type': 'rtsp', 'friendly_name': 'room', 'file_original_name': None}
-2023-10-09 18:51:53 : INFO : detect : 134 - Begin video capture now: rtsp://backend2.interplay.iterate.ai/test5.sdp
-2023-10-09 18:51:53 : INFO : detect : 145 - Within reading path
-2023-10-09 18:53:05 : WARNING : detect : 187 - room folder removed
-2023-10-09 18:53:05 : WARNING : detect : 191 - room folder created
+2023-10-09 20:36:04 : INFO : <module> : 30 - Setup complete (v1.0)
+2023-10-09 20:36:04 : INFO : <module> : 39 - No GPU devices found
+2023-10-09 20:36:04 : INFO : <module> : 50 - Input request: {'video_link': '/home/jana/Downloads/video_1.mp4', 'building': 'room', 'video_type': 'mp4', 'friendly_name': 'room', 'file_original_name': None}
+2023-10-09 20:36:04 : INFO : <module> : 60 - Detection for video starts...
+2023-10-09 20:36:04 : INFO : <module> : 62 - GPU Utilization before: 
+2023-10-09 20:36:04 : INFO : <module> : 23 - imported packages within inference_images_weapon
+2023-10-09 20:36:04 : INFO : <module> : 41 - loading weapon model: tf
+2023-10-09 20:36:20 : INFO : <module> : 50 - loaded weapon model
+2023-10-09 20:36:20 : INFO : detect : 50 - Video source: /home/jana/Downloads/video_1.mp4
+2023-10-09 20:36:20 : INFO : detect : 71 - msg_local_py[payload]: {'video_link': '/home/jana/Downloads/video_1.mp4', 'building': 'room', 'video_type': 'mp4', 'friendly_name': 'room', 'file_original_name': None}
+2023-10-09 20:36:20 : INFO : detect : 134 - Begin video capture now: /home/jana/Downloads/video_1.mp4
+2023-10-09 20:36:20 : INFO : detect : 139 - video: < cv2.VideoCapture 0x7ffa8a4bc130>
+2023-10-09 20:36:20 : WARNING : detect : 187 - room folder removed
+2023-10-09 20:36:20 : WARNING : detect : 191 - room folder created
+2023-10-09 20:36:20 : INFO : detect : 270 - Frame #: 100 of 650
+2023-10-09 20:36:20 : INFO : inference_images_weapon : 57 - started weapon inference
+2023-10-09 20:36:22 : INFO : inference_images_weapon : 87 - fps after inference: 0.45612839224981583
+2023-10-09 20:36:22 : INFO : inference_images_weapon : 145 - Ended weapon inference
+2023-10-09 20:36:22 : INFO : detect : 278 - FPS01: 0.45
+2023-10-09 20:36:22 : INFO : detect : 328 - After sending the input
+2023-10-09 20:36:22 : INFO : do_restful : 20 - RESTful: {'enable': True, 'url': 'http://localhost:5001/consumeevent'}
+2023-10-09 20:36:22 : INFO : do_restful : 25 - post to local wep RESTful service {"status": "Weapon Detected |Rifle : 0.5613151", "video_name": "room", "datetime": "09-10-2023 20:36:22", "time(s)": "219.97", "Threat_status": "Threat detected | Weapon:['Rifle : 0.5613151']", "image_path": "weapon_219.97.jpg", "weapon_images": ["weapon_219.97.jpg"]}
+2023-10-09 20:36:23 : INFO : do_restful : 27 - response: <Response [201]>
+2023-10-09 20:36:23 : INFO : do_restful : 29 - post to remote RESTful service {"status": "Weapon Detected |Rifle : 0.5613151", "video_name": "room", "datetime": "09-10-2023 20:36:22", "time(s)": "219.97", "Threat_status": "Threat detected | Weapon:['Rifle : 0.5613151']", "image_path": "weapon_219.97.jpg", "weapon_images": ["weapon_219.97.jpg"]}, url:http://localhost:5001/consumeevent
+2023-10-09 20:36:23 : INFO : do_restful : 31 - response: <Response [200]>
+2023-10-09 20:36:23 : INFO : detect : 340 - After fetching img
+2023-10-09 20:36:23 : WARNING : detect : 378 - Rifle : 0.5613151 Detected in Frame: 100
+2023-10-09 20:36:23 : INFO : detect : 397 - output assignment. formatvp80 path:inferences/
+2023-10-09 20:36:23 : INFO : detect : 418 - FPS02: 0.37
+2023-10-09 20:36:24 : INFO : detect : 270 - Frame #: 200 of 650
+2023-10-09 20:36:24 : INFO : inference_images_weapon : 57 - started weapon inference
+2023-10-09 20:36:25 : INFO : inference_images_weapon : 87 - fps after inference: 0.7254770132646815
+2023-10-09 20:36:25 : INFO : inference_images_weapon : 145 - Ended weapon inference
+2023-10-09 20:36:25 : INFO : detect : 278 - FPS01: 0.72
+2023-10-09 20:36:25 : INFO : detect : 328 - After sending the input
+2023-10-09 20:36:25 : INFO : do_restful : 20 - RESTful: {'enable': True, 'url': 'http://localhost:5001/consumeevent'}
+2023-10-09 20:36:25 : INFO : do_restful : 25 - post to local wep RESTful service {"status": "Weapon Detected |Rifle : 0.7744594", "video_name": "room", "datetime": "09-10-2023 20:36:25", "time(s)": "276.46", "Threat_status": "Threat detected | Weapon:['Rifle : 0.7744594']", "image_path": "weapon_276.46.jpg", "weapon_images": ["weapon_276.46.jpg"]}
+2023-10-09 20:36:25 : INFO : do_restful : 27 - response: <Response [201]>
+2023-10-09 20:36:25 : INFO : do_restful : 29 - post to remote RESTful service {"status": "Weapon Detected |Rifle : 0.7744594", "video_name": "room", "datetime": "09-10-2023 20:36:25", "time(s)": "276.46", "Threat_status": "Threat detected | Weapon:['Rifle : 0.7744594']", "image_path": "weapon_276.46.jpg", "weapon_images": ["weapon_276.46.jpg"]}, url:http://localhost:5001/consumeevent
+2023-10-09 20:36:25 : INFO : do_restful : 31 - response: <Response [200]>
+2023-10-09 20:36:25 : INFO : detect : 340 - After fetching img
+2023-10-09 20:36:25 : WARNING : detect : 378 - Rifle : 0.7744594 Detected in Frame: 200
+2023-10-09 20:36:25 : INFO : detect : 397 - output assignment. formatvp80 path:inferences/
+2023-10-09 20:36:25 : INFO : detect : 418 - FPS02: 0.61
+2023-10-09 20:36:26 : INFO : detect : 270 - Frame #: 300 of 650
+2023-10-09 20:36:26 : INFO : inference_images_weapon : 57 - started weapon inference
+2023-10-09 20:36:28 : INFO : inference_images_weapon : 87 - fps after inference: 0.4802411794711203
+2023-10-09 20:36:28 : INFO : inference_images_weapon : 145 - Ended weapon inference
+2023-10-09 20:36:28 : INFO : detect : 278 - FPS01: 0.48
+2023-10-09 20:36:28 : INFO : detect : 328 - After sending the input
+2023-10-09 20:36:28 : INFO : do_restful : 20 - RESTful: {'enable': True, 'url': 'http://localhost:5001/consumeevent'}
+2023-10-09 20:36:28 : INFO : do_restful : 25 - post to local wep RESTful service {"status": "Weapon Detected |Rifle : 0.8050348", "video_name": "room", "datetime": "09-10-2023 20:36:28", "time(s)": "626.54", "Threat_status": "Threat detected | Weapon:['Rifle : 0.8050348']", "image_path": "weapon_626.54.jpg", "weapon_images": ["weapon_626.54.jpg"]}
+2023-10-09 20:36:29 : INFO : do_restful : 27 - response: <Response [201]>
+2023-10-09 20:36:29 : INFO : do_restful : 29 - post to remote RESTful service {"status": "Weapon Detected |Rifle : 0.8050348", "video_name": "room", "datetime": "09-10-2023 20:36:28", "time(s)": "626.54", "Threat_status": "Threat detected | Weapon:['Rifle : 0.8050348']", "image_path": "weapon_626.54.jpg", "weapon_images": ["weapon_626.54.jpg"]}, url:http://localhost:5001/consumeevent
+2023-10-09 20:36:29 : INFO : do_restful : 31 - response: <Response [200]>
+2023-10-09 20:36:29 : INFO : detect : 340 - After fetching img
+2023-10-09 20:36:29 : WARNING : detect : 378 - Rifle : 0.8050348 Detected in Frame: 300
+2023-10-09 20:36:29 : INFO : detect : 397 - output assignment. formatvp80 path:inferences/
+2023-10-09 20:36:29 : INFO : detect : 418 - FPS02: 0.43
+2023-10-09 20:36:30 : INFO : detect : 270 - Frame #: 400 of 650
+2023-10-09 20:36:30 : INFO : inference_images_weapon : 57 - started weapon infe2023-12023-10-09 20:36:32 : INFO : inference_images_weapon : 87 - fps after inference: 0.43457544103516366
+2023-10-09 20:36:32 : INFO : inference_images_weapon : 145 - Ended weapon inference
+2023-10-09 20:36:32 : INFO : detect : 278 - FPS01: 0.43
+2023-10-09 20:36:33 : INFO : detect : 328 - After sending the input
+2023-10-09 20:36:33 : INFO : do_restful : 20 - RESTful: {'enable': True, 'url': 'http://localhost:5001/consumeevent'}
+2023-10-09 20:36:33 : INFO : do_restful : 25 - post to local wep RESTful service {"status": "Weapon Detected |Rifle : 0.81772876", "video_name": "room", "datetime": "09-10-2023 20:36:32", "time(s)": "922.56", "Threat_status": "Threat detected | Weapon:['Rifle : 0.81772876']", "image_path": "weapon_922.56.jpg", "weapon_images": ["weapon_922.56.jpg"]}
+2023-10-09 20:36:33 : INFO : do_restful : 27 - response: <Response [201]>
+2023-10-09 20:36:33 : INFO : do_restful : 29 - post to remote RESTful service {"status": "Weapon Detected |Rifle : 0.81772876", "video_name": "room", "datetime": "09-10-2023 20:36:32", "time(s)": "922.56", "Threat_status": "Threat detected | Weapon:['Rifle : 0.81772876']", "image_path": "weapon_922.56.jpg", "weapon_images": ["weapon_922.56.jpg"]}, url:http://localhost:5001/consumeevent
+2023-10-09 20:36:33 : INFO : do_restful : 31 - response: <Response [200]>
+2023-10-09 20:36:33 : INFO : detect : 340 - After fetching img
+2023-10-09 20:36:33 : WARNING : detect : 378 - Rifle : 0.81772876 Detected in Frame: 400
+2023-10-09 20:36:33 : INFO : detect : 397 - output assignment. formatvp80 path:inferences/
+2023-10-09 20:36:33 : INFO : detect : 418 - FPS02: 0.3922023-10-09 20:36:35 : INFO : detect : 270 - Frame #: 500 of 650
+2023-10-09 20:36:35 : INFO : inference_images_weapon : 57 - started weapon inference22023-10-09 20:36:37 : INFO : inference_images_weapon : 87 - fps after inference: 0.42523274330568034
+2023-10-09 20:36:37 : INFO : inference_images_weapon : 145 - Ended weapon inference
+2023-10-09 20:36:37 : INFO : detect : 278 - FPS01: 0.42
+2023-10-09 20:36:37 : INFO : detect : 328 - After sending the input
+2023-10-09 20:36:37 : INFO : do_restful : 20 - RESTful: {'enable': True, 'url': 'http://localhost:5001/consumeevent'}
+2023-10-09 20:36:37 : INFO : do_restful : 25 - post to local wep RESTful service {"status": "Weapon Detected |Rifle : 0.87456095", "video_name": "room", "datetime": "09-10-2023 20:36:37", "time(s)": "1177.49", "Threat_status": "Threat detected | Weapon:['Rifle : 0.87456095']", "image_path": "weapon_1177.49.jpg", "weapon_images": ["weapon_1177.49.jpg"]}
+2023-10-09 20:36:37 : INFO : do_restful : 27 - response: <Response [201]>
+2023-10-09 20:36:37 : INFO : do_restful : 29 - post to remote RESTful service {"status": "Weapon Detected |Rifle : 0.87456095", "video_name": "room", "datetime": "09-10-2023 20:36:37", "time(s)": "1177.49", "Threat_status": "Threat detected | Weapon:['Rifle : 0.87456095']", "image_path": "weapon_1177.49.jpg", "weapon_images": ["weapon_1177.49.jpg"]}, url:http://localhost:5001/consumeevent
+2023-10-09 20:36:37 : INFO : do_restful : 31 - response: <Response [200]>
+2023-10-09 20:36:37 : INFO : detect : 340 - After fetching img
+2023-10-09 20:36:37 : WARNING : detect : 378 - Rifle : 0.87456095 Detected in Frame: 500
+2023-10-09 20:36:37 : INFO : detect : 397 - output assignment. formatvp80 path:inferences/
+2023-10-09 20:36:37 : INFO : detect : 418 - FPS02: 0.3202023-10-09 20:36:38 : INFO : detect : 270 - Frame #: 600 of 650
+2023-10-09 20:36:38 : INFO : inference_images_weapon : 57 - started weapon inferenc202023-10-09 20:36:41 : INFO : inference_images_weapon : 87 - fps after inference: 0.4472465884990889
+2023-10-09 20:36:41 : INFO : inference_images_weapon : 145 - Ended weapon inference
+2023-10-09 20:36:41 : INFO : detect : 278 - FPS01: 0.45
+2023-10-09 20:36:41 : INFO : detect : 340 - After fetching img
+2023-10-09 20:36:41 : INFO : detect : 418 - FPS02: 0.4202023-10-09 20:36:41 : INFO : detect : 215 - Ended video inference here
+2023-10-09 20:36:41 : INFO : <module> : 66 - Response: {'payload': [{'status': 'Completed', 'video_name': 'room', 'video_type': 'mp4', 'datetime': '09-10-2023 20:36:41', 'Threat_status': '', 'last_updated': True}], 'data_weapon': {'status': 'Weapon Detected |Rifle : 0.87456095', 'video_name': 'room', 'datetime': '09-10-2023 20:36:37', 'time(s)': '1177.49', 'Threat_status': "Threat detected | Weapon:['Rifle : 0.87456095']", 'image_path': 'weapon_1177.49.jpg', 'weapon_images': ['weapon_1177.49.jpg']}} <class 'dict'>
+2023-10-09 20:36:41 : INFO : <module> : 68 - GPU Utilization after:
+2023-10-09 20:36:41 : INFO : <module> : 73 - Response: {'status': 'Weapon Detected |Rifle : 0.87456095', 'video_name': 'room', 'datetime': '09-10-2023 20:36:37', 'time(s)': '1177.49', 'Threat_status': "Threat detected | Weapon:['Rifle : 0.87456095']", 'image_path': 'weapon_1177.49.jpg', 'weapon_images': ['weapon_1177.49.jpg']} <class 'dict'>

@@ -1,4 +1,5 @@
 from flask import Blueprint, render_template, request, redirect, url_for,jsonify
+import json
 from .models import Event
 from datetime import datetime
 from extenstions import db
@@ -32,15 +33,19 @@ def add_event_as_json():
     content_type = request.headers.get('Content-Type')
     if (content_type == 'application/json'):
         data = request.get_json()
+        dataJson=json.loads(data)
+        print("Data type",type(json.loads(data)))
+        print("Data ",json.loads(data))
+
         if 'status' not in data or 'video_name' not in data:
             return jsonify({'message': 'Missing camera_id or config field in request'}), 400
         try:
-            status=data.get('status')
-            video_name=data.get('video_name')
-            date_time=data.get('date_time')
-            Threat_status=data.get('Threat_status')
-            image_path=data.get('image_path')
-            weapon_images=data.get('weapon_images')
+            status=dataJson.get('status')
+            video_name=dataJson.get('video_name')
+            date_time=dataJson.get('datetime')
+            Threat_status=dataJson.get('Threat_status')
+            image_path=dataJson.get('image_path')
+            weapon_images=dataJson.get('weapon_images')[0]
             timestamp=datetime.now()
             event=Event(status=status,video_name=video_name,date_time=date_time,Threat_status=Threat_status,image_path=image_path,weapon_images=weapon_images,timestamp=timestamp)
             db.session.add(event)

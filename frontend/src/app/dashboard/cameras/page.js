@@ -33,7 +33,7 @@ export default function AllCamera() {
                     {state.cameras ? state.cameras.map((item, key) => {
                         return (
                             <li key={key} className=''>
-                                <Link href={"/dashboard/cameras/"+item._id} className=''>
+                                <Link href={"/dashboard/cameras/"+item.id} className=''>
                                    <div className='bg-white drop-shadow-md  hover:text-black-600 hover:drop-shadow-lg hover:shadow-black px-2 pb-4 p-2'> <img className='rounded-lg ' src={"/images/cam1.png"} />
                                     <div className='pl-2'>
                                     <span className='font-semibold block mt-2 '>{item.name}</span>

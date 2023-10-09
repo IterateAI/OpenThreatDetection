@@ -27,7 +27,7 @@ function DataTable({ data, itemsPerPage }) {
               Weapon Status
             </th>
             <th className="px-6 py-3 bg-gray text-left text-md leading-4 font-bold uppercase tracking-wider">
-              Date an Time
+              Date and Time
             </th>
             <th className="px-6 py-3 bg-gray text-left text-md leading-4 font-bold uppercase tracking-wider">
               Image
@@ -39,7 +39,7 @@ function DataTable({ data, itemsPerPage }) {
             <tr key={index} className={index % 2 === 0 ? 'bg-gray-light' : 'bg-white'}>
               <Link href={"/dashboard/notifications/" + item._id}><td className="px-6 py-4 whitespace-no-wrap">{item.video_name}</td></Link>
               <td className="px-6 py-4 whitespace-no-wrap">{item.status}</td>
-              <td className="px-6 py-4 whitespace-no-wrap">{item.datetime}</td>
+              <td className="px-6 py-4 whitespace-no-wrap">{item.date_time}</td>
               <Link href={"/dashboard/notifications/" + item._id}><td className="px-6 py-4 whitespace-no-wrap">{item.image_path}</td></Link>
 
             </tr>

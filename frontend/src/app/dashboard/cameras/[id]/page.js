@@ -17,7 +17,7 @@ export default function Camera({ params }) {
         axios.get(API_URL + '/camera/cameras/' + id) // Replace with your API endpoint
             .then((response) => {
                 console.log(response.data)
-                const resData=response.data[0]
+                const resData=response.data
                 const updateData=state
                 updateData.selectedCamera=resData
                 setCamData(resData)
@@ -38,11 +38,11 @@ export default function Camera({ params }) {
 
                     <div className='grid grid-cols-2 gap-4'>
                         <div>
-                            <RTSPPlayer url={camData.link} />
+                            <RTSPPlayer url={camData.video_link} />
                         </div>
                         <div>
                             <h2 className='text-xl py-2 font-semibold text-gray'>Camera Name:<span className='pl-4 text-black'> {camData.name}</span></h2>
-                            <h2 className='text-xl py-2 font-semibold text-gray'>Link:<span className='pl-4 text-black'> {camData.link}</span></h2>
+                            <h2 className='text-xl py-2 font-semibold text-gray'>Link:<span className='pl-4 text-black'> {camData.video_link}</span></h2>
                             <h2 className='text-xl py-2 font-semibold text-gray'> Location:<span className='pl-4 text-black'> {camData.location}</span></h2>
                             <h2 className='text-xl py-2 font-semibold text-gray'> Address:<span className='pl-4 text-black'> {camData.name}</span></h2>
                             <div className='flex gap-4'>

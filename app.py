@@ -17,9 +17,9 @@ app = Flask(__name__)
 CORS(app) 
 
 api = Api(app)
-app.register_blueprint(test_bp, url_prefix='/test')
-app.register_blueprint(camera_bp, url_prefix='/camera')
-app.register_blueprint(event_bp, url_prefix='/event')
+app.register_blueprint(test_bp, url_prefix='/api/test')
+app.register_blueprint(camera_bp, url_prefix='/api/camera')
+app.register_blueprint(event_bp, url_prefix='/api/event')
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///weapon.db'  # SQLite database file
 db.init_app(app)
@@ -30,7 +30,7 @@ with app.app_context():
 
 app.debug=True
 
-@app.route("/")
+@app.route("/api")
 def home():	
 	return render_template("index.html")
 

@@ -4,17 +4,19 @@ import { API_URL } from '@/app/config/config';
 import { useGlobalContext } from '@/app/context/store';
 import axios from 'axios';
 import Link from 'next/link'
+import { useParams } from 'next/navigation';
 import React, { useEffect, useState } from 'react'
 
 
-export default function Camera({ params }) {
+export default function Camera() {
     const [camData, setCamData] = useState()
     const {state,setState}=useGlobalContext()
-    console.log(params)
-    const { id } = params
+    const params=useParams()
+    console.log("Router",params)
+    const {id}  = params
 
     useEffect(() => {
-        axios.get(API_URL + '/camera/cameras/' + id) // Replace with your API endpoint
+        axios.get(API_URL + '/camera/' + id) // Replace with your API endpoint
             .then((response) => {
                 console.log(response.data)
                 const resData=response.data
@@ -34,7 +36,7 @@ export default function Camera({ params }) {
 
                 {camData ?
                 <>
-                            <h1 className='text-3xl py-2 font-semibold text-gray'>{camData.name}</h1>
+                            <h1 className='text-3xl py-2 font-semibold text-gray'>{camData[0].name}</h1>
 
                     <div className='grid grid-cols-2 gap-4'>
                         <div>

@@ -1,18 +1,24 @@
 "use client"
 import {useRouter} from 'next/navigation'
+import { useEffect } from 'react';
 
 function HomePage({ isAuthenticated=true }) {
   const router = useRouter();
   console.log("Logged in",isAuthenticated)
-
-  if (!isAuthenticated) {
-    router.push('/login');
-    return null;
-  }
-  else{
-    router.push('/dashboard');
-    return null;
-  }
+  useEffect(()=>{
+    if (!isAuthenticated) {
+      router.push('/login');
+      
+    }
+    else{
+      router.push('/dashboard');
+      
+    }
+  },[])
+  return(
+    <>Home</>
+  )
+  
 }
 
 

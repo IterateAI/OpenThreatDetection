@@ -49,13 +49,13 @@ export default function Camera() {
                             <h2 className='text-xl py-2 font-semibold text-gray'> Address:<span className='pl-4 text-black'> {camData.name}</span></h2>
                             <div className='flex gap-4'>
                                 <Link
-                                    href={"/dashboard/cameras/edit/"+camData._id}
+                                    href={"/app/dashboard/cameras/edit/"+camData._id}
                                     className="flex w-full justify-center rounded-md bg-black px-3 py-3.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-black-600  "
                                 >
                                     EDIT 
                                 </Link>
                                 <Link
-                                    href={"/dashboard/cameras"}
+                                    href={"/app/dashboard/cameras"}
                                     className="flex w-full justify-center rounded-md bg-white px-3 py-3.5 text-sm font-semibold leading-6 border-2 text-black shadow-sm hover:bg-black-600  "
                                 >
                                     CANCEL 

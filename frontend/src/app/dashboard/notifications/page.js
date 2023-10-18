@@ -73,7 +73,7 @@ const Notifications = () => {
                     <div className='text-lg border-b-2 border-red font-semibold text-center  flex justify-center items-center py-4'><img className='w-5 mx-2 h-4' src="/images/Warning.png" />Threat Detected</div>
                     <div className='md:grid px-4 py-4 gap-4 grid-cols-2'>
                         <div className='max-w-2xl'>
-                            <Link href={"/dashboard/notifications/"+0}>
+                            <Link href={"/app/dashboard/notifications/"+0}>
                             <img src={API_URL+"/static/"+ alerts.image_path} alt='thumbnail' />
                             </Link>
                         </div>
@@ -121,9 +121,9 @@ const Notifications = () => {
                 <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
                     {data.map((item, key) => (
                         <div key={key} className='grid grid-cols-2 '>
-                            <Link href={"/dashboard/notifications/"+item._id} className='flex justify-center items-center'>
+                            <Link href={"/app/dashboard/notifications/"+item._id} className='flex justify-center items-center'>
                                 <img src={API_URL+"/static/"+item.image_path} />
-                                <img className='absolute ' src='/images/play_icon.png' />
+                                <img className='absolute ' src='/app/images/play_icon.png' />
                             </Link>
 
                             <div className='px-3.5 pt-2'>

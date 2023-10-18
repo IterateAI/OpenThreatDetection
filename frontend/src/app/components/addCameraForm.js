@@ -41,7 +41,7 @@ function AddCameraForm() {
 
       if (response.status === 201) {
         console.log('Form submitted successfully');
-        router.push("/dashboard/cameras")
+        router.push("/app/dashboard/cameras")
       } else {
         console.error('Form submission failed');
       }
@@ -132,7 +132,7 @@ function AddCameraForm() {
             ADD CAMERA
           </button>
           <Link
-            href={"/dashboard/cameras"}
+            href={"/app/dashboard/cameras"}
             className="flex w-full justify-center rounded-md bg-white px-3 py-3.5 text-sm font-semibold  border-2 leading-6 text-black shadow-sm hover:bg-black-600  "
           >
             CANCEL

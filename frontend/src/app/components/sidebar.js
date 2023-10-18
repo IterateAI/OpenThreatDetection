@@ -23,20 +23,20 @@ export const Sidebar = () => {
                     <ul className=' pt-2 '>
                     <li>
                         <Link className={`pl-8 block ${active=="allcamera"?"bg-black-600 ":""}  py-3.5 cursor-pointer text-white  hover:bg-black-600 focus:bg-black-600 active:bg-black`} 
-                            href={"/dashboard/cameras"}>
+                            href={"/app/dashboard/cameras"}>
                             All Cameras
                         </Link>
 
                     </li>
                     <li >
                         <Link className={`pl-8 block  ${active=="notifications"?"bg-black-600 ":""} py-3.5 cursor-pointer text-white  hover:bg-black-600 focus:bg-black-600 active:bg-black`} 
-                            href={"/dashboard/notifications"}>
+                            href={"/app/dashboard/notifications"}>
                             Notifications
                         </Link>
                     </li>
                     <li >
                         <Link className={`pl-8 block  ${active=="allAlert"?"bg-black-600 ":""} py-3.5 cursor-pointer text-white  hover:bg-black-600 focus:bg-black-600 active:bg-black`} 
-                            href={"/dashboard/allAlert"}>
+                            href={"/app/dashboard/allAlert"}>
                             Alert List
                         </Link>
                     </li>
@@ -54,14 +54,14 @@ export const Sidebar = () => {
                 <ul className=' grid grid-cols-2 '>
                     <li>
                         <Link className={`  ${active=="allcamera"?"border-b-2 border-black bg-white ":"bg-black-300"}  text-center block  py-3.5 cursor-pointer text-black  hover:bg-black-100 focus:bg-black-100 active:bg-white`}
-                            href={"/dashboard/allcamera"}>
+                            href={"/app/dashboard/allcamera"}>
                             All Cameras
                         </Link>
 
                     </li>
                     <li >
                         <Link className={`  ${active=="notifications"?"border-b-2 border-black bg-white ":"bg-black-300"} border-black text-center block  py-3.5 cursor-pointer text-black  hover:bg-black-100 focus:bg-black-100 active:bg-white`}
-                            href={"/dashboard/notifications"}>
+                            href={"/app/dashboard/notifications"}>
                             Notifications
                         </Link>
                     </li>

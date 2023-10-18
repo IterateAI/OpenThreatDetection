@@ -37,10 +37,10 @@ function DataTable({ data, itemsPerPage }) {
         <tbody className="bg-white divide-y divide-gray-200">
           {currentData.map((item, index) => (
             <tr key={index} className={index % 2 === 0 ? 'bg-gray-light' : 'bg-white'}>
-              <Link href={"/dashboard/notifications/" + item._id}><td className="px-6 py-4 whitespace-no-wrap">{item.video_name}</td></Link>
+              <Link href={"/app/dashboard/notifications/" + item._id}><td className="px-6 py-4 whitespace-no-wrap">{item.video_name}</td></Link>
               <td className="px-6 py-4 whitespace-no-wrap">{item.status}</td>
               <td className="px-6 py-4 whitespace-no-wrap">{item.date_time}</td>
-              <Link href={"/dashboard/notifications/" + item._id}><td className="px-6 py-4 whitespace-no-wrap">{item.image_path}</td></Link>
+              <Link href={"/app/dashboard/notifications/" + item._id}><td className="px-6 py-4 whitespace-no-wrap">{item.image_path}</td></Link>
 
             </tr>
           ))}

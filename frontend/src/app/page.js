@@ -7,11 +7,11 @@ function HomePage({ isAuthenticated=true }) {
   console.log("Logged in",isAuthenticated)
   useEffect(()=>{
     if (!isAuthenticated) {
-      router.push('/login');
+      router.push('/app/login');
       
     }
     else{
-      router.push('/dashboard');
+      router.push('/app/dashboard');
       
     }
   },[])

@@ -13,7 +13,7 @@ function LoginForm() {
     const onSubmit=(e)=>{
         e.preventDefault()
         localStorage.setItem("token","myname")
-        router.push("/dashboard")
+        router.push("/app/dashboard")
       }
   return (
     <div>

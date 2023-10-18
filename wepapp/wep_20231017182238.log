@@ -1,0 +1,37 @@
+2023-10-17 18:22:38 : INFO : <module> : 12 - Setup complete (v1.0)
+2023-10-17 18:22:38 : INFO : <module> : 21 - No GPU devices found
+2023-10-17 18:22:38 : INFO : <module> : 32 - Input request: {'video_link': 'videos/9mm_fast_walk.mp4', 'building': 'Building A', 'video_type': 'mp4', 'friendly_name': 'fast_walker', 'file_original_name': None}
+2023-10-17 18:22:38 : INFO : <module> : 42 - Detection for video starts...
+2023-10-17 18:22:38 : INFO : <module> : 44 - GPU Utilization before: 
+2023-10-17 18:22:38 : INFO : <module> : 23 - imported packages within inference_images_weapon
+2023-10-17 18:22:38 : INFO : <module> : 41 - loading weapon model: tf
+2023-10-17 18:22:51 : INFO : <module> : 50 - loaded weapon model
+2023-10-17 18:22:51 : INFO : detect : 50 - Video source: videos/9mm_fast_walk.mp4
+2023-10-17 18:22:51 : INFO : detect : 71 - msg_local_py[payload]: {'video_link': 'videos/9mm_fast_walk.mp4', 'building': 'Building A', 'video_type': 'mp4', 'friendly_name': 'fast_walker', 'file_original_name': None}
+2023-10-17 18:22:51 : INFO : detect : 134 - Begin video capture now: videos/9mm_fast_walk.mp4
+2023-10-17 18:22:51 : INFO : detect : 139 - video: < cv2.VideoCapture 0x7f375f3b80d0>
+2023-10-17 18:22:51 : WARNING : detect : 191 - fast_walker folder created
+2023-10-17 18:22:52 : INFO : detect : 270 - Frame #: 100 of 258
+2023-10-17 18:22:52 : INFO : inference_images_weapon : 57 - started weapon inference
+2023-10-17 18:22:54 : INFO : inference_images_weapon : 87 - fps after inference: 0.48017229082364987
+2023-10-17 18:22:54 : INFO : inference_images_weapon : 145 - Ended weapon inference
+2023-10-17 18:22:54 : INFO : detect : 278 - FPS01: 0.48
+2023-10-17 18:22:54 : INFO : detect : 340 - After fetching img
+2023-10-17 18:22:54 : INFO : detect : 418 - FPS02: 0.45
+2023-10-17 18:22:55 : INFO : detect : 270 - Frame #: 200 of 258
+2023-10-17 18:22:55 : INFO : inference_images_weapon : 57 - started weapon inference
+2023-10-17 18:22:56 : INFO : inference_images_weapon : 87 - fps after inference: 1.1825380490833315
+2023-10-17 18:22:56 : INFO : inference_images_weapon : 145 - Ended weapon inference
+2023-10-17 18:22:56 : INFO : detect : 278 - FPS01: 1.17
+2023-10-17 18:22:56 : INFO : detect : 328 - After sending the input
+2023-10-17 18:22:56 : INFO : do_restful : 20 - RESTful: {'enable': True, 'url': 'http://127.0.0.1:5000/event/events'}
+2023-10-17 18:22:56 : INFO : do_restful : 25 - post to local wep RESTful service {"status": "Weapon Detected |Gun : 0.88657093", "video_name": "fast_walker", "datetime": "17-10-2023 18:22:56", "time(s)": "171.35", "Threat_status": "Threat detected | Weapon:['Gun : 0.88657093']", "image_path": "weapon_171.35.jpg", "weapon_images": ["weapon_171.35.jpg"]}
+2023-10-17 18:22:56 : ERROR : do_restful : 33 - Failed to post to RESTful service: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /event/events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f36fe07c2b0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2023-10-17 18:22:56 : INFO : detect : 340 - After fetching img
+2023-10-17 18:22:56 : WARNING : detect : 378 - Gun : 0.88657093 Detected in Frame: 200
+2023-10-17 18:22:56 : INFO : detect : 397 - output assignment. formatvp80 path:inferences/
+2023-10-17 18:22:57 : INFO : detect : 418 - FPS02: 0.77
+2023-10-17 18:22:58 : INFO : detect : 215 - Ended video inference here
+2023-10-17 18:22:58 : INFO : <module> : 48 - Response: {'payload': [{'status': 'Completed', 'video_name': 'fast_walker', 'video_type': 'mp4', 'datetime': '17-10-2023 18:22:58', 'Threat_status': '', 'last_updated': True}], 'data_weapon': {'status': 'Weapon Detected |Gun : 0.88657093', 'video_name': 'fast_walker', 'datetime': '17-10-2023 18:22:56', 'time(s)': '171.35', 'Threat_status': "Threat detected | Weapon:['Gun : 0.88657093']", 'image_path': 'weapon_171.35.jpg', 'weapon_images': ['weapon_171.35.jpg']}} <class 'dict'>
+2023-10-17 18:22:58 : INFO : <module> : 50 - GPU Utilization after:
+2023-10-17 18:22:58 : INFO : <module> : 55 - Response: {'status': 'Weapon Detected |Gun : 0.88657093', 'video_name': 'fast_walker', 'datetime': '17-10-2023 18:22:56', 'time(s)': '171.35', 'Threat_status': "Threat detected | Weapon:['Gun : 0.88657093']", 'image_path': 'weapon_171.35.jpg', 'weapon_images': ['weapon_171.35.jpg']} <class 'dict'>

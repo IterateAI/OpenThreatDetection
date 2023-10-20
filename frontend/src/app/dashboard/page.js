@@ -11,6 +11,7 @@ import { redirect, useRouter } from 'next/navigation'
 import { FooterLogo } from '../components/footerlogo'
 
 import Link from 'next/link'
+import { routerBase } from '../config/config'
 
 export default function Dashboard() {
   const { router } = useRouter()

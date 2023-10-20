@@ -1,4 +1,5 @@
 import React from 'react'
+import { routerBase } from '../config/config'
 
 export const FooterLogo = ({type}) => {
 
@@ -8,7 +9,7 @@ export const FooterLogo = ({type}) => {
                 <div className=' py-8 flex justify-center'>
                     <div>
                         <span className='font-semibold text-xs  block'>Open Source Provided By</span>
-                        <img className='h-14 mt-2' src='/app/images/iterate_logo.png' />
+                        <img className='h-14 mt-2' src={routerBase+'app/images/iterate_logo.png'} />
                     </div>
 
                 </div>
@@ -20,7 +21,7 @@ export const FooterLogo = ({type}) => {
                 <div className=' py-8 flex justify-center'>
                     <div>
                         <span className='text-xs text-white   block'>Open Source Provided By</span>
-                        <img className='h-14 mt-2' src='/app/images/logo_dark.png' />
+                        <img className='h-14 mt-2' src={routerBase+'images/logo_dark.png'} />
                     </div>
 
                 </div>

@@ -1,5 +1,5 @@
 'use client'
-import { API_URL } from '@/app/config/config';
+import { API_URL, routerBase } from '@/app/config/config';
 import { useGlobalContext } from '@/app/context/store';
 import axios from 'axios';
 import Link from 'next/link'
@@ -33,8 +33,8 @@ export default function AllCamera() {
                     {state.cameras ? state.cameras.map((item, key) => {
                         return (
                             <li key={key} className=''>
-                                <Link href={"/app/dashboard/cameras/"+item.id} className=''>
-                                   <div className='bg-white drop-shadow-md  hover:text-black-600 hover:drop-shadow-lg hover:shadow-black px-2 pb-4 p-2'> <img className='rounded-lg ' src={"/app/images/cam1.png"} />
+                                <Link href={routerBase+"dashboard/cameras/"+item.id} className=''>
+                                   <div className='bg-white drop-shadow-md  hover:text-black-600 hover:drop-shadow-lg hover:shadow-black px-2 pb-4 p-2'> <img className='rounded-lg ' src={routerBase+"images/cam1.png"} />
                                     <div className='pl-2'>
                                     <span className='font-semibold block mt-2 '>{item.name}</span>
                                     <span className=' block mt-2 '>{item.location}</span>

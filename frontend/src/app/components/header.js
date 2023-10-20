@@ -7,6 +7,7 @@ import CustomeNotification from './CustomeNotification';
 import { useGlobalContext } from '../context/store';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import { routerBase } from '../config/config';
 
 const socket = io("http://localhost:5001");
 
@@ -15,7 +16,7 @@ const Header = () => {
     const {alerts,setAlerts}=useGlobalContext();
     const [components, setComponents] = useState([]);
     const handleClick=()=>{
-        router.push("/app/dashboard/notifications")
+        router.push(routerBase+"dashboard/notifications")
     }
 
     const handleAddDynamicComponent = (data) => {
@@ -70,14 +71,14 @@ const Header = () => {
             <header className="bg-black">
                 <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
                     <div className="flex lg:flex-1">
-                        <Link href="/dashboard" className="-m-1.5 p-1.5">
+                        <Link href={routerBase+"dashboard"} className="-m-1.5 p-1.5">
                             <span className="sr-only">Threat Detect</span>
-                            <img className="h-4 w-auto" src="/app/images/header_logo.png" alt="Threat Detect" />
+                            <img className="h-4 w-auto" src={routerBase+"images/header_logo.png"} alt="Threat Detect" />
                         </Link>
                     </div>
                     <div className="lg:flex lg:flex-1 lg:justify-end">
-                        <Link href="/dashboard/cameras/add" className="text-sm font-semibold leading-6 text-gray-900">
-                            <img className='px-4  ' src='/app/images/videoadd.png' />
+                        <Link href={routerBase+"dashboard/cameras/add"} className="text-sm font-semibold leading-6 text-gray-900">
+                            <img className='px-4  ' src={routerBase+'images/videoadd.png'} />
                         </Link>
                     </div>
 

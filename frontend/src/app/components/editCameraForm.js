@@ -1,7 +1,7 @@
 'use client'
 import { useEffect, useState } from 'react';
 import { InputField } from './InputFiled';
-import { API_URL } from '../config/config';
+import { API_URL, routerBase } from '../config/config';
 import axios from 'axios';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
@@ -38,7 +38,7 @@ function EditCameraForm({camId}) {
     e.preventDefault();
     console.log(updateformData)
     try {
-      const response = await axios.put(API_URL+'/camera/cameras/update/'+camId, 
+      const response = await axios.put(API_URL+'/camera/'+camId, 
       JSON.stringify({"updated_fields":updateformData}),
       {
         headers: {
@@ -50,7 +50,7 @@ function EditCameraForm({camId}) {
       if (response.status === 200) {
         
         console.log('Form submitted successfully');
-        router.push('/app/dashboard/cameras/'+camId)
+        router.push(routerBase+'dashboard/cameras/'+camId)
       } else {
         console.error('Form submission failed');
       }
@@ -59,7 +59,7 @@ function EditCameraForm({camId}) {
     }
   };
   useEffect(()=>{
-    axios.get(API_URL + '/camera/cameras/' + camId) // Replace with your API endpoint
+    axios.get(API_URL + '/camera/' + camId) // Replace with your API endpoint
     .then((response) => {
         console.log(response.data)
         const resData=response.data[0]
@@ -84,7 +84,7 @@ function EditCameraForm({camId}) {
 
             id="link_type"
             name="link_type"
-            value={formData.link_type}
+            value={formData.video_type}
             onChange={handleChange}
           >
             {/* <option value="">Select Stream Type</option> */}
@@ -101,7 +101,7 @@ function EditCameraForm({camId}) {
             type={"text"}
             id={"link"}
             name={"link"}
-            value={formData.link}
+            value={formData.video_link}
             onchange={handleChange}
           />
           <InputField
@@ -134,7 +134,7 @@ function EditCameraForm({camId}) {
             type={"text"}
             id={"lat"}
             name={"lat"}
-            value={formData.lat}
+            value={formData.latitude}
             onchange={handleChange}
           />
           <InputField
@@ -142,7 +142,7 @@ function EditCameraForm({camId}) {
             type={"text"}
             id={"long"}
             name={"long"}
-            value={formData.long}
+            value={formData.longitude}
             onchange={handleChange}
           />
           </div>

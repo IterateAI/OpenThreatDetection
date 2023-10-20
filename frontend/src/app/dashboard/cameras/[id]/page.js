@@ -1,6 +1,6 @@
 'use client'
 import RTSPPlayer from '@/app/components/RTSPPlayer';
-import { API_URL } from '@/app/config/config';
+import { API_URL, routerBase } from '@/app/config/config';
 import { useGlobalContext } from '@/app/context/store';
 import axios from 'axios';
 import Link from 'next/link'
@@ -22,7 +22,7 @@ export default function Camera() {
                 const resData=response.data
                 const updateData=state
                 updateData.selectedCamera=resData
-                setCamData(resData)
+                setCamData(resData[0])
                 setState(updateData)
             })
             .catch((error) => {
@@ -36,7 +36,7 @@ export default function Camera() {
 
                 {camData ?
                 <>
-                            <h1 className='text-3xl py-2 font-semibold text-gray'>{camData[0].name}</h1>
+                            <h1 className='text-3xl py-2 font-semibold text-gray'>{camData.name}</h1>
 
                     <div className='grid grid-cols-2 gap-4'>
                         <div>
@@ -49,13 +49,13 @@ export default function Camera() {
                             <h2 className='text-xl py-2 font-semibold text-gray'> Address:<span className='pl-4 text-black'> {camData.name}</span></h2>
                             <div className='flex gap-4'>
                                 <Link
-                                    href={"/app/dashboard/cameras/edit/"+camData._id}
+                                    href={routerBase+"dashboard/cameras/edit/"+camData.id}
                                     className="flex w-full justify-center rounded-md bg-black px-3 py-3.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-black-600  "
                                 >
                                     EDIT 
                                 </Link>
                                 <Link
-                                    href={"/app/dashboard/cameras"}
+                                    href={routerBase+"dashboard/cameras"}
                                     className="flex w-full justify-center rounded-md bg-white px-3 py-3.5 text-sm font-semibold leading-6 border-2 text-black shadow-sm hover:bg-black-600  "
                                 >
                                     CANCEL 

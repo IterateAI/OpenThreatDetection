@@ -6,6 +6,7 @@ import {
   EyeIcon,
   EyeSlashIcon
 } from '@heroicons/react/24/outline'
+import { routerBase } from '../config/config'
 
 function LoginForm() {
   const router = useRouter()
@@ -13,7 +14,7 @@ function LoginForm() {
     const onSubmit=(e)=>{
         e.preventDefault()
         localStorage.setItem("token","myname")
-        router.push("/app/dashboard")
+        router.push(routerBase+"dashboard")
       }
   return (
     <div>

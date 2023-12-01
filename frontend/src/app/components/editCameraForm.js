@@ -38,7 +38,7 @@ function EditCameraForm({camId}) {
     e.preventDefault();
     console.log(updateformData)
     try {
-      const response = await axios.put(API_URL+'/camera/'+camId, 
+      const response = await axios.put(API_URL+'/camera/cameras/update/'+camId, 
       JSON.stringify({"updated_fields":updateformData}),
       {
         headers: {
@@ -50,7 +50,7 @@ function EditCameraForm({camId}) {
       if (response.status === 200) {
         
         console.log('Form submitted successfully');
-        router.push(routerBase+'dashboard/cameras/'+camId)
+        router.push('/dashboard/cameras/'+camId)
       } else {
         console.error('Form submission failed');
       }
@@ -59,10 +59,10 @@ function EditCameraForm({camId}) {
     }
   };
   useEffect(()=>{
-    axios.get(API_URL + '/camera/' + camId) // Replace with your API endpoint
+    axios.get(API_URL + '/camera/cameras/' + camId) // Replace with your API endpoint
     .then((response) => {
         console.log(response.data)
-        const resData=response.data[0]
+        const resData=response.data
         // const updateData=state
         // updateData.selectedCamera=resData
         setFormData(resData)
@@ -99,8 +99,8 @@ function EditCameraForm({camId}) {
           <InputField
             label={"Video URL"}
             type={"text"}
-            id={"link"}
-            name={"link"}
+            id={"video_link"}
+            name={"video_link"}
             value={formData.video_link}
             onchange={handleChange}
           />
@@ -134,7 +134,7 @@ function EditCameraForm({camId}) {
             type={"text"}
             id={"lat"}
             name={"lat"}
-            value={formData.latitude}
+            value={formData.lat}
             onchange={handleChange}
           />
           <InputField
@@ -142,7 +142,7 @@ function EditCameraForm({camId}) {
             type={"text"}
             id={"long"}
             name={"long"}
-            value={formData.longitude}
+            value={formData.long}
             onchange={handleChange}
           />
           </div>

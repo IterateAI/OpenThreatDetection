@@ -14,7 +14,7 @@ from extenstions import db
 from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app) 
+CORS(app)
 
 api = Api(app)
 app.register_blueprint(test_bp, url_prefix='/api/test')

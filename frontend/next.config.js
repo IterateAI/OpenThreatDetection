@@ -2,7 +2,7 @@
 const nextConfig = {
     // output: 'export',
     // basePath:'/app',
-    assetPrefix:'/app/'
+    // assetPrefix:'/app/'
 }
 
 module.exports = nextConfig

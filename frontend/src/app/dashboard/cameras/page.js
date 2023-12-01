@@ -11,7 +11,7 @@ export default function AllCamera() {
     const {state,setState}=useGlobalContext()
    
     useEffect(()=>{
-        axios.get(API_URL+'/camera') // Replace with your API endpoint
+        axios.get(API_URL+'/camera/cameras') // Replace with your API endpoint
         .then((response) => {
             console.log(response.data)
             const updateData=state

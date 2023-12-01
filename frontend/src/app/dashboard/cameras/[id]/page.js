@@ -16,13 +16,13 @@ export default function Camera() {
     const {id}  = params
 
     useEffect(() => {
-        axios.get(API_URL + '/camera/' + id) // Replace with your API endpoint
+        axios.get(API_URL + '/camera/cameras/' + id) // Replace with your API endpoint
             .then((response) => {
                 console.log(response.data)
                 const resData=response.data
                 const updateData=state
                 updateData.selectedCamera=resData
-                setCamData(resData[0])
+                setCamData(resData)
                 setState(updateData)
             })
             .catch((error) => {

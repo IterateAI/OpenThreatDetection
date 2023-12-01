@@ -206,22 +206,24 @@ Each WDE will provide the following info:
 The following is a sample WDE rendered by the WEPHOOK
 * Science * 07-07-2023 11:28:26 * Weapon Detected |Gun : 82%  * weapon_07-07-2023 11:28:26.jpg
 
-### Frontend
+# Frontend
 ## Running the Next.js Frontend
-#Prerequisites
+### Prerequisites
 Make sure you have the following installed on your machine:
 
 - Node.js: Download and Install Node.js
 - npm (Node Package Manager): npm is included with Node.js installation.
-#Steps
-```cd frontend```
+### Steps
+```js
+cd frontend
+```
 
 ```js
 npm install
 npm run dev
 ```
 Open your web browser and navigate to http://localhost:3000. You should see your Next.js application running.
-##Troubleshooting
+### Troubleshooting
 If you encounter issues, refer to the Next.js documentation for troubleshooting and additional information.
 
 ## Third party software

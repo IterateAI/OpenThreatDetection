@@ -1,0 +1,8 @@
+2023-12-02 00:48:41 : INFO : <module> : 12 - Setup complete (v1.0)
+2023-12-02 00:48:41 : INFO : <module> : 21 - No GPU devices found
+2023-12-02 00:48:41 : INFO : <module> : 32 - Input request: {'video_link': '/home/janaroy/Iterate/OpenThreatDetection/wepapp/videos/9mm_fast_walk.mp4', 'building': 'room', 'video_type': 'mp4', 'friendly_name': 'room', 'file_original_name': None}
+2023-12-02 00:48:41 : INFO : <module> : 42 - Detection for video starts...
+2023-12-02 00:48:41 : INFO : <module> : 44 - GPU Utilization before: 
+2023-12-02 00:49:35 : INFO : <module> : 23 - imported packages within inference_images_weapon
+2023-12-02 00:49:35 : INFO : <module> : 41 - loading weapon model: tf
+2023-12-02 00:49:56 : ERROR : <module> : 59 - Processing exception occurred: Read less bytes than requested

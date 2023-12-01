@@ -1,30 +1,12 @@
 #! /usr/bin/env python
 
 #run only one video at a time. stop processing video when press stop and save the video which is processed until
-from platform import python_version
-import multiprocessing
-from multiprocessing import Pool, cpu_count
-import sys
-import os
-import json
-import re
-import pandas as pd
-from datetime import datetime
-import queue
-import functools
-import trace
-import threading
-import time
-import base64
-import io
-from PIL import Image
 import GPUtil
 import tensorflow as tf 
 from wepcore.detection import detect
 import wepcore.constants as cons
 import logging as log
 import wepcore.setup as cfg
-import wepcore.downstream_services as push
 import typing
 
 log.info("Setup complete ({})".format(cfg.version_info))

@@ -6,8 +6,9 @@ import uuid
 
 app = Flask(__name__)
 
-socketio = SocketIO(app,logger=True,engineio_logger=True)
+socketio = SocketIO(app,logger=True,engineio_logger=True,cors_allowed_origins="*")
 
+# CORS(app)
 #Render the assigned template file
 @app.route("/", methods=['GET'])
 def index():

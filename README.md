@@ -81,6 +81,17 @@ A sample WEPAPP event json snippet follows:
 
 ## WEPWEB startup/shutdown
 
+```py
+//create virtual environment 
+virtualenv venv
+//activate the 'venv'
+source venv/bin/activate
+
+//install all the dependencies
+pip install -r requirements.txt
+```
+
+
 WEPWEB is started from a TTY and binds to port 5000 as follows.
 
 ```js
@@ -224,7 +235,7 @@ npm run dev
 ```
 Open your web browser and navigate to http://localhost:3000. You should see your Next.js application running.
 ### Troubleshooting
-If you encounter issues, refer to the Next.js documentation for troubleshooting and additional information.
+If you encounter issues, refer to the Next.js documentation(https://nextjs.org/docs) for troubleshooting and additional information.
 
 ## Third party software
 - Tensorflow library version 2.6.0 or later

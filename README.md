@@ -79,6 +79,29 @@ A sample WEPAPP event json snippet follows:
 {'status': 'Weapon Detected |Gun : 0.87357223', 'video_name': 'Science', 'datetime': '30-06-2023 14:38:44', 'image_path': 'weapon_30-06-2023 14:38:44.jpg'}
 ```
 
+### Database
+
+The application uses SQLite as the database for storing and managing data. SQLite is a lightweight, serverless, and self-contained database engine, making it suitable for smaller applications and projects.
+
+#### Setup
+
+1. **Database File:**
+   The SQLite database file is included in the project, typically named `weapon.db`. You don't need to set up a separate database server.
+
+2. **Schema:**
+   The database schema and structure can be found in the SQL scripts located in the `instance` directory. If there are migrations or initialization scripts, provide details on how to run them.
+
+#### Connecting to the Database
+
+- **Connection in Code:**
+  In your application code, you can connect to the SQLite database using a library or ORM compatible with SQLite. Ensure that the necessary configurations, such as the database file path, are correctly set.
+
+  ```python
+  import sqlite3
+
+  # Connect to the SQLite database
+  connection = sqlite3.connect('path/to/database.db')
+
 ## WEPWEB startup/shutdown
 
 ```python
@@ -90,6 +113,7 @@ source venv/bin/activate
 # install all the dependencies
 pip install -r requirements.txt
 ```
+
 
 
 WEPWEB is started from a TTY and binds to port 5000 as follows.

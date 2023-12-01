@@ -18,8 +18,8 @@ export default function Dashboard() {
   return (
     <div className='container px-12 py-12'>
       <div className='flex flex-col justify-center items-center'>
-        <img src={routerBase+"images/threat_logo.png"} />
-        <Link href={routerBase+"dashboard/allcamera"}
+        <img src={"/images/threat_logo.png"} />
+        <Link href={"/dashboard/cameras"}
           type="submit"
           className="flex w-48 mt-8  justify-center rounded-md bg-black px-3 py-3.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-black-600  "
         >

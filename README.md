@@ -250,6 +250,8 @@ The following is a sample WDE rendered by the WEPHOOK
 * Science * 07-07-2023 11:28:26 * Weapon Detected |Gun : 82%  * weapon_07-07-2023 11:28:26.jpg
 
 # Frontend
+![Alt text](image.png)
+![Alt text](image-1.png)
 ## Running the Next.js Frontend
 ### Prerequisites
 Make sure you have the following installed on your machine:

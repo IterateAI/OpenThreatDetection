@@ -1,8 +1,8 @@
-2023-12-02 00:48:41 : INFO : <module> : 12 - Setup complete (v1.0)
-2023-12-02 00:48:41 : INFO : <module> : 21 - No GPU devices found
-2023-12-02 00:48:41 : INFO : <module> : 32 - Input request: {'video_link': 'rtsp://backend2.interplay.iterate.ai/test5.sdp', 'building': 'Science', 'video_type': 'rtsp', 'friendly_name': 'Science', 'file_original_name': None}
-2023-12-02 00:48:41 : INFO : <module> : 40 - Detection for video stream starts...
-2023-12-02 00:48:41 : INFO : <module> : 44 - GPU Utilization before: 
-2023-12-02 00:49:35 : INFO : <module> : 23 - imported packages within inference_images_weapon
-2023-12-02 00:49:35 : INFO : <module> : 41 - loading weapon model: tf
-2023-12-02 00:49:53 : ERROR : <module> : 59 - Processing exception occurred: Read less bytes than requested
+2023-12-02 01:55:56 : INFO : <module> : 12 - Setup complete (v1.0)
+2023-12-02 01:55:56 : INFO : <module> : 21 - No GPU devices found
+2023-12-02 01:55:56 : INFO : <module> : 32 - Input request: {'video_link': 'rtsp://backend2.interplay.iterate.ai/test5.sdp', 'building': 'Science', 'video_type': 'rtsp', 'friendly_name': 'Science', 'file_original_name': None}
+2023-12-02 01:55:56 : INFO : <module> : 40 - Detection for video stream starts...
+2023-12-02 01:55:56 : INFO : <module> : 44 - GPU Utilization before: 
+2023-12-02 01:56:04 : INFO : <module> : 23 - imported packages within inference_images_weapon
+2023-12-02 01:56:04 : INFO : <module> : 41 - loading weapon model: tf
+2023-12-02 01:56:24 : ERROR : <module> : 59 - Processing exception occurred: Read less bytes than requested

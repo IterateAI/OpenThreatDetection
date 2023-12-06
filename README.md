@@ -286,5 +286,5 @@ MIT
 
 ## Authors
 
-Balasundram Arunn, Chatura Samarasinghe, Reed McCauley
+Balasundram Arunn, Chatura Samarasinghe, Reed McCauley, Janarthan J, Gamsan Vigneswaran, Ramakrishnan Velmakivan
 

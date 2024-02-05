@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Event{% endblock %}
+{% block content %}
+<h1>Event</h1>
+<br>
+{% for event in events %}
+<h1>{{event.video_name}} {{event.status}} {{event.image_path}}</h1>
+<br>
+{% endfor %}
+{% endblock %}

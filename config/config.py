@@ -1,0 +1,1 @@
+# {"name": "Residence", "location": "residence", "link_type": "mp4", "link": "./videos/9mm_fast_walk.mp4", "frame_skip_size": 100, "address": {"street": "1234 Hargrave Way"}, "lat": -12.345, "long": 45.56}

@@ -1,0 +1,113 @@
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 515.86.01    Driver Version: 515.86.01    CUDA Version: 11.7     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  NVIDIA GeForce ...  Off  | 00000000:01:00.0 Off |                  N/A |
+| N/A   29C    P0    23W /  N/A |   1349MiB /  8192MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|    0   N/A  N/A      1122      G   /usr/lib/xorg/Xorg                  4MiB |
+|    0   N/A  N/A     98795      C   python                           1341MiB |
++-----------------------------------------------------------------------------+
+
+$ python wep.py 
+2023-03-23 19:49:11.336019: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-03-23 19:49:11.409932: I tensorflow/core/util/port.cc:104] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-03-23 19:49:11.760900: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /home/iterate3/miniconda3/lib/
+2023-03-23 19:49:11.760936: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /home/iterate3/miniconda3/lib/
+2023-03-23 19:49:11.760940: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+2023-03-23 19:49:13.186400: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:981] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-23 19:49:13.189741: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:981] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-23 19:49:13.189838: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:981] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-23 19:49:13.190204: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-03-23 19:49:13.191296: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:981] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-23 19:49:13.191414: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:981] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-23 19:49:13.191501: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:981] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-23 19:49:13.491431: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:981] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-23 19:49:13.491563: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:981] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-23 19:49:13.491638: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:981] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-23 19:49:13.491709: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:981] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-23 19:49:13.491828: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1613] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 1024 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 3070 Laptop GPU, pci bus id: 0000:01:00.0, compute capability: 8.6
+2023-03-23 19:49:13.492215: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:981] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-23 19:49:13.492293: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1613] Created device /job:localhost/replica:0/task:0/device:GPU:1 with 1024 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 3070 Laptop GPU, pci bus id: 0000:01:00.0, compute capability: 8.6
+2023-03-23 19:49:13 : INFO : <module> : 38 - Physical GPU: 1, Logical GPU: 2
+2023-03-23 19:49:13 : INFO : <module> : 30 - Setup complete (v1.0)
+2023-03-23 19:49:13 : INFO : <module> : 43 - GPU devices found: [PhysicalDevice(name='/physical_device:GPU:0', device_type='GPU')]
+2023-03-23 19:49:13 : INFO : <module> : 47 - Cannot modify virtual device once initialized
+2023-03-23 19:49:13 : INFO : <module> : 69 - Input request: {'video_link': 'videos/9mm_fast_walk.mp4', 'building': 'Building A', 'video_type': 'mp4', 'friendly_name': 'fast_walker', 'file_original_name': None}
+2023-03-23 19:49:13 : INFO : <module> : 80 - Detection for video starts...
+2023-03-23 19:49:13 : INFO : <module> : 82 - GPU Utilization before: 
+| ID | GPU | MEM |
+------------------
+|  0 |  4% |  4% |
+2023-03-23 19:49:13 : INFO : <module> : 23 - imported packages within inference_images_weapon
+2023-03-23 19:49:13 : INFO : <module> : 41 - loading weapon model: tf
+2023-03-23 19:49:22 : INFO : <module> : 50 - loaded weapon model
+2023-03-23 19:49:22 : INFO : detect : 49 - Video source: videos/9mm_fast_walk.mp4
+2023-03-23 19:49:22.443500: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:981] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-23 19:49:22.443649: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:981] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-23 19:49:22.443729: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:981] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-23 19:49:22.443850: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:981] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-23 19:49:22.443922: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:981] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-23 19:49:22.443988: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1613] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 1024 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 3070 Laptop GPU, pci bus id: 0000:01:00.0, compute capability: 8.6
+2023-03-23 19:49:22 : INFO : detect : 70 - msg_local_py[payload]: {'video_link': 'videos/9mm_fast_walk.mp4', 'building': 'Building A', 'video_type': 'mp4', 'friendly_name': 'fast_walker', 'file_original_name': None}
+2023-03-23 19:49:22 : INFO : detect : 133 - Begin video capture now: videos/9mm_fast_walk.mp4
+2023-03-23 19:49:22 : INFO : detect : 138 - video: < cv2.VideoCapture 0x7f6adc7770d0>
+2023-03-23 19:49:22 : WARNING : detect : 186 - fast_walker folder removed
+2023-03-23 19:49:22 : WARNING : detect : 190 - fast_walker folder created
+2023-03-23 19:49:23 : INFO : detect : 269 - Frame #: 100 of 258
+2023-03-23 19:49:23 : INFO : inference_images_weapon : 57 - started weapon inference
+2023-03-23 19:49:24.018292: I tensorflow/compiler/xla/stream_executor/cuda/cuda_dnn.cc:428] Loaded cuDNN version 8100
+2023-03-23 19:49:24.457570: W tensorflow/compiler/xla/stream_executor/gpu/asm_compiler.cc:115] *** WARNING *** You are using ptxas 10.1.243, which is older than 11.1. ptxas before 11.1 is known to miscompile XLA code, leading to incorrect results or invalid-address errors.
+
+You may not need to update to CUDA 11.1; cherry-picking the ptxas binary is often sufficient.
+2023-03-23 19:49:24.459283: W tensorflow/compiler/xla/stream_executor/gpu/asm_compiler.cc:234] Falling back to the CUDA driver for PTX compilation; ptxas does not support CC 8.6
+2023-03-23 19:49:24.459294: W tensorflow/compiler/xla/stream_executor/gpu/asm_compiler.cc:237] Used ptxas at ptxas
+2023-03-23 19:49:24.459331: W tensorflow/compiler/xla/stream_executor/gpu/redzone_allocator.cc:318] UNIMPLEMENTED: ptxas ptxas too old. Falling back to the driver to compile.
+Relying on driver to perform ptx compilation. 
+Modify $PATH to customize ptxas location.
+This message will be only logged once.
+2023-03-23 19:49:24.482782: W tensorflow/tsl/framework/bfc_allocator.cc:290] Allocator (GPU_0_bfc) ran out of memory trying to allocate 1.75GiB with freed_by_count=0. The caller indicates that this is not a failure, but this may mean that there could be performance gains if more memory were available.
+2023-03-23 19:49:24.482797: W tensorflow/tsl/framework/bfc_allocator.cc:290] Allocator (GPU_0_bfc) ran out of memory trying to allocate 1.75GiB with freed_by_count=0. The caller indicates that this is not a failure, but this may mean that there could be performance gains if more memory were available.
+2023-03-23 19:49:24.912105: W tensorflow/tsl/framework/bfc_allocator.cc:290] Allocator (GPU_0_bfc) ran out of memory trying to allocate 1.21GiB with freed_by_count=0. The caller indicates that this is not a failure, but this may mean that there could be performance gains if more memory were available.
+2023-03-23 19:49:24.912129: W tensorflow/tsl/framework/bfc_allocator.cc:290] Allocator (GPU_0_bfc) ran out of memory trying to allocate 1.21GiB with freed_by_count=0. The caller indicates that this is not a failure, but this may mean that there could be performance gains if more memory were available.
+2023-03-23 19:49:24.969570: W tensorflow/tsl/framework/bfc_allocator.cc:290] Allocator (GPU_0_bfc) ran out of memory trying to allocate 4.11GiB with freed_by_count=0. The caller indicates that this is not a failure, but this may mean that there could be performance gains if more memory were available.
+2023-03-23 19:49:24.969587: W tensorflow/tsl/framework/bfc_allocator.cc:290] Allocator (GPU_0_bfc) ran out of memory trying to allocate 4.11GiB with freed_by_count=0. The caller indicates that this is not a failure, but this may mean that there could be performance gains if more memory were available.
+2023-03-23 19:49:24.976162: W tensorflow/tsl/framework/bfc_allocator.cc:290] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.06GiB with freed_by_count=0. The caller indicates that this is not a failure, but this may mean that there could be performance gains if more memory were available.
+2023-03-23 19:49:24.976175: W tensorflow/tsl/framework/bfc_allocator.cc:290] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.06GiB with freed_by_count=0. The caller indicates that this is not a failure, but this may mean that there could be performance gains if more memory were available.
+2023-03-23 19:49:24.984074: W tensorflow/tsl/framework/bfc_allocator.cc:290] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.06GiB with freed_by_count=0. The caller indicates that this is not a failure, but this may mean that there could be performance gains if more memory were available.
+2023-03-23 19:49:24.984087: W tensorflow/tsl/framework/bfc_allocator.cc:290] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.06GiB with freed_by_count=0. The caller indicates that this is not a failure, but this may mean that there could be performance gains if more memory were available.
+2023-03-23 19:49:25 : INFO : inference_images_weapon : 87 - fps after inference: 0.4473750088663215
+2023-03-23 19:49:25 : INFO : inference_images_weapon : 145 - Ended weapon inference
+2023-03-23 19:49:25 : INFO : detect : 277 - FPS01: 0.45
+2023-03-23 19:49:25 : INFO : detect : 335 - After fetching img
+2023-03-23 19:49:25 : INFO : detect : 413 - FPS02: 0.44
+2023-03-23 19:49:26 : INFO : detect : 269 - Frame #: 200 of 258
+2023-03-23 19:49:26 : INFO : inference_images_weapon : 57 - started weapon inference
+2023-03-23 19:49:26 : INFO : inference_images_weapon : 87 - fps after inference: 25.655746128061462
+2023-03-23 19:49:26 : INFO : inference_images_weapon : 145 - Ended weapon inference
+2023-03-23 19:49:26 : INFO : detect : 277 - FPS01: 24.38
+2023-03-23 19:49:26 : INFO : detect : 324 - After sending the input
+2023-03-23 19:49:26 : INFO : detect : 335 - After fetching img
+2023-03-23 19:49:26 : WARNING : detect : 373 - Gun : 0.8865653 Detected in Frame: 200
+2023-03-23 19:49:26 : INFO : detect : 392 - output assignment. formatvp80 path:inferences/
+OpenCV: FFMPEG: tag 0x30387076/'vp80' is not supported with codec id 139 and format 'webm / WebM'
+2023-03-23 19:49:26 : INFO : detect : 413 - FPS02: 6.12
+2023-03-23 19:49:27 : INFO : detect : 214 - Ended video inference here
+2023-03-23 19:49:27 : INFO : <module> : 86 - Response: {'payload': [{'status': 'Completed', 'video_name': 'fast_walker', 'video_type': 'mp4', 'datetime': '23-03-2023 19:49:27', 'Threat_status': '', 'last_updated': True}]} <class 'dict'>
+2023-03-23 19:49:27 : INFO : <module> : 88 - GPU Utilization after:
+| ID | GPU | MEM |
+------------------
+|  0 |  0% | 27% |
+2023-03-23 19:49:27 : INFO : do_mqtt : 18 - MQTT is disabled

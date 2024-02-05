@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Camera{% endblock %}
+{% block content %}
+<h1>Cameras</h1><br>
+<h1>Name    Location     Link</h1>	
+<h2>
+{% for camera in cameras %}
+{{camera.name}} {{camera.location}} {{camera.link}}
+<br>
+{% endfor %}
+<h2>
+{% endblock %}
+
+

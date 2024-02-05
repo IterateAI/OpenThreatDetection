@@ -1,0 +1,47 @@
+$ python wep.py
+2023-03-20 16:54:50 : INFO : <module> : 30 - Setup complete (v1.0)
+2023-03-20 16:54:50 : INFO : <module> : 48 - Input request: {'video_link': 'videos/9mm_fast_walk.mp4', 'building': 'Building A', 'video_type': 'mp4', 'friendly_name': 'fast_walker', 'file_original_name': None}
+2023-03-20 16:54:50 : INFO : <module> : 59 - Detection for video starts...
+2023-03-20 16:54:50 : INFO : <module> : 61 - GPU Utilization before: 
+| ID | GPU | MEM |
+------------------
+2023-03-20 16:54:50.643781: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-03-20 16:54:50 : INFO : <module> : 23 - imported packages within inference_images_weapon
+2023-03-20 16:54:50 : INFO : <module> : 41 - loading weapon model: tf
+2023-03-20 16:55:04 : INFO : <module> : 50 - loaded weapon model
+2023-03-20 16:55:04 : INFO : detect : 49 - Video source: videos/9mm_fast_walk.mp4
+2023-03-20 16:55:04 : INFO : detect : 70 - msg_local_py[payload]: {'video_link': 'videos/9mm_fast_walk.mp4', 'building': 'Building A', 'video_type': 'mp4', 'friendly_name': 'fast_walker', 'file_original_name': None}
+2023-03-20 16:55:04 : INFO : detect : 133 - Begin video capture now: videos/9mm_fast_walk.mp4
+2023-03-20 16:55:04 : INFO : detect : 138 - video: <VideoCapture 0x7fc694184990>
+2023-03-20 16:55:04 : WARNING : detect : 186 - fast_walker folder removed
+2023-03-20 16:55:04 : WARNING : detect : 190 - fast_walker folder created
+2023-03-20 16:55:05 : INFO : detect : 269 - Frame #: 100 of 258
+2023-03-20 16:55:05 : INFO : inference_images_weapon : 57 - started weapon inference
+2023-03-20 16:55:05.033250: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:185] None of the MLIR Optimization Passes are enabled (registered 2)
+2023-03-20 16:55:06 : INFO : inference_images_weapon : 87 - fps after inference: 0.8838809211672873
+2023-03-20 16:55:06 : INFO : inference_images_weapon : 145 - Ended weapon inference
+2023-03-20 16:55:06 : INFO : detect : 277 - FPS01: 0.88
+2023-03-20 16:55:06 : INFO : detect : 335 - After fetching img
+2023-03-20 16:55:06 : INFO : detect : 413 - FPS02: 0.79
+2023-03-20 16:55:07 : INFO : detect : 269 - Frame #: 200 of 258
+2023-03-20 16:55:07 : INFO : inference_images_weapon : 57 - started weapon inference
+2023-03-20 16:55:07 : INFO : inference_images_weapon : 87 - fps after inference: 1.63868869085921
+2023-03-20 16:55:07 : INFO : inference_images_weapon : 145 - Ended weapon inference
+2023-03-20 16:55:07 : INFO : detect : 277 - FPS01: 1.63
+2023-03-20 16:55:07 : INFO : detect : 324 - After sending the input
+2023-03-20 16:55:07 : INFO : detect : 335 - After fetching img
+2023-03-20 16:55:08 : WARNING : detect : 373 - Gun : 0.8865709 Detected in Frame: 200
+2023-03-20 16:55:08 : INFO : detect : 392 - output assignment. formatvp80 path:inferences/
+OpenCV: FFMPEG: tag 0x30387076/'vp80' is not supported with codec id 139 and format 'webm / WebM'
+2023-03-20 16:55:08 : INFO : detect : 413 - FPS02: 1.13
+2023-03-20 16:55:09 : INFO : detect : 214 - Ended video inference here
+2023-03-20 16:55:09 : INFO : <module> : 65 - Response: {'payload': [{'status': 'Completed', 'video_name': 'fast_walker', 'video_type': 'mp4', 'datetime': '20-03-2023 16:55:09', 'Threat_status': '', 'last_updated': True}]} <class 'dict'>
+2023-03-20 16:55:09 : INFO : <module> : 67 - GPU Utilization after:
+| ID | GPU | MEM |
+------------------
+2023-03-20 16:55:09 : INFO : do_mqtt : 18 - MQTT is disabled
+
+real	0m24.511s
+user	0m40.162s
+sys	0m4.629s

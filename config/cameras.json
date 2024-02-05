@@ -1,0 +1,6 @@
+{
+	"cameras": [
+		{"name": "Science", "location": "science", "link_type": "rtsp", "link": "rtsp://admin:iterate411@192.168.1.247", "frame_skip_size": 100, "address": {"street": "1234 Hargrave Way"}, "lat": -12.345, "long": 45.56},
+		{"name": "Residence", "location": "residence", "link_type": "rtsp", "link": "rtsp://admin:iterate411@192.168.1.247", "frame_skip_size": 100, "address": {"street": "1234 Hargrave Way"}, "lat": -12.345, "long": 45.56}
+	]
+}

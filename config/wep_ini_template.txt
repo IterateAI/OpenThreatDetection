@@ -1,0 +1,58 @@
+[source]
+  friendly_name = $name
+  building = $location
+  video_type = $type
+  video_link = $link
+  stream_read_duration = 7200
+
+[log]
+  log_config_file = ../config/weplog_$name.conf
+
+[processor]
+  knife_threshold = 0.7
+  output_path = inferences/
+  bad_frame_skip_size = 10
+  frame_skip_size = $frame_size
+
+[inference]
+  framework = tf
+  weights_weapon = weaponresource/checkpoints_weapon/WeaponOct7_608_6000/
+  input_size_weapon = 608
+  tiny = False
+  model = yolov4
+  # output_format = XVID
+  # for webm
+  output_format = vp80
+  iou_weapon = 0.5
+  score_weapon = 0.3
+  crop_rate = 150
+
+[restful]
+  enable = True
+  url = http://localhost:5001/consumeevent
+
+[mqtt]
+  enable = False
+  broker = localhost
+  topic = /wep/results
+  user = none
+  password = none
+
+[raptor]
+  enable = True
+  url_token = https://staginglogin.raptortech.com/oauth/token
+  url_building = https://api-stag.raptortech.com/clientbuilding/v1/Buildings
+  url_template = https://api-stag.raptortech.com/incidents/v1/IncidentTemplate
+  url_incident = https://api-stag.raptortech.com/incidents/v1/Incident/Create
+  client_id = 
+  client_secret = 
+  audience = https://api-stag.raptortech.com
+  grant_type = client_credentials
+  client_token = 
+  buildingUID = 
+  templateUID = 
+  templateName = Lockdown
+  lat = 29.806123
+  long = -95.409467
+  additionalData = Initiated by partner Iterate
+  isDrill = false

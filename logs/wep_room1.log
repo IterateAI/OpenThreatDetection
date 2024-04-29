@@ -1,0 +1,16 @@
+2024-04-29 12:51:45 : INFO : <module> : 12 - Setup complete (v1.0)
+2024-04-29 12:51:45 : INFO : <module> : 21 - No GPU devices found
+2024-04-29 12:51:45 : INFO : <module> : 32 - Input request: {'video_link': 'rtsp://backend.interplay.iterate.ai/test1.sdp', 'building': 'room', 'video_type': 'rtsp', 'friendly_name': 'room1', 'file_original_name': None}
+2024-04-29 12:51:45 : INFO : <module> : 40 - Detection for video stream starts...
+2024-04-29 12:51:45 : INFO : <module> : 44 - GPU Utilization before: 
+2024-04-29 12:51:45 : INFO : <module> : 23 - imported packages within inference_images_weapon
+2024-04-29 12:51:45 : INFO : <module> : 41 - loading weapon model: tf
+2024-04-29 12:52:00 : INFO : <module> : 50 - loaded weapon model
+2024-04-29 12:52:00 : INFO : detect : 50 - Video source: rtsp://backend.interplay.iterate.ai/test1.sdp
+2024-04-29 12:52:00 : INFO : detect : 71 - msg_local_py[payload]: {'video_link': 'rtsp://backend.interplay.iterate.ai/test1.sdp', 'building': 'room', 'video_type': 'rtsp', 'friendly_name': 'room1', 'file_original_name': None}
+2024-04-29 12:52:00 : INFO : detect : 134 - Begin video capture now: rtsp://backend.interplay.iterate.ai/test1.sdp
+2024-04-29 12:52:00 : INFO : detect : 145 - Within reading path
+2024-04-29 12:52:00 : ERROR : detect : 152 - Stream URL is invalid
+2024-04-29 12:52:00 : ERROR : detect : 158 - Exception in the current frame: {'status': 'Stream URL is invalid!', 'video_name': 'room1', 'video_type': 'rtsp', 'datetime': '29-04-2024 12:52:00', 'Threat_status': '', 'last_updated': True}
+2024-04-29 12:52:00 : INFO : <module> : 48 - Response: {'payload': [{'status': 'Stream URL is invalid!', 'video_name': 'room1', 'video_type': 'rtsp', 'datetime': '29-04-2024 12:52:00', 'Threat_status': '', 'last_updated': True}]} <class 'dict'>
+2024-04-29 12:52:00 : INFO : <module> : 50 - GPU Utilization after:

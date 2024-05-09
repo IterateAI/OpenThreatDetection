@@ -1,6 +1,6 @@
 'use client'
 import RTSPPlayer from '@/app/components/RTSPPlayer';
-import { API_URL, routerBase } from '@/app/config/config';
+import { API_URL, PUBLIC_URL, routerBase } from '@/app/config/config';
 import { useGlobalContext } from '@/app/context/store';
 import axios from 'axios';
 import Link from 'next/link'
@@ -11,9 +11,11 @@ import React, { useEffect, useState } from 'react'
 export default function Camera() {
     const [camData, setCamData] = useState()
     const {state,setState}=useGlobalContext()
+    const [imageUrl, setImageUrl] = useState('');
     const params=useParams()
     console.log("Router",params)
     const {id}  = params
+
 
     useEffect(() => {
         axios.get(API_URL + '/camera/cameras/' + id) // Replace with your API endpoint
@@ -29,6 +31,19 @@ export default function Camera() {
                 console.error('Error fetching data:', error);
             });
     }, []);
+
+    useEffect(() => {
+        if(camData){
+        const updateImageUrl = () => {
+          const newImageUrl = PUBLIC_URL+"/"+camData.name+"/live.jpg"+`?timestamp=${Date.now()}`;
+          setImageUrl(newImageUrl);
+        };
+        updateImageUrl();
+        const intervalId = setInterval(updateImageUrl, 1000);
+        return () => clearInterval(intervalId);
+    }
+      }, [camData]); 
+    
     console.log(state)
     return (
         <div className=''>
@@ -40,7 +55,8 @@ export default function Camera() {
 
                     <div className='grid grid-cols-2 gap-4'>
                         <div>
-                            <RTSPPlayer url={camData.video_link} />
+                            {imageUrl&&<img src={imageUrl}/>}
+                            {/* <RTSPPlayer url={API_URL+camData.name+"/live.jpg"} /> */}
                         </div>
                         <div>
                             <h2 className='text-xl py-2 font-semibold text-gray'>Camera Name:<span className='pl-4 text-black'> {camData.name}</span></h2>

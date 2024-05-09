@@ -9,7 +9,7 @@ import { useRouter } from 'next/navigation';
 function EditCameraForm({camId}) {
   const router=useRouter()
   const [formData, setFormData] = useState({
-    link_type: '',
+    video_type: '',
     link: '',
     name: '',
     location:'',
@@ -78,12 +78,12 @@ function EditCameraForm({camId}) {
     <div className='max-w-xl'>
       <form onSubmit={handleSubmit}>
         <div className='py-4'>
-          <label htmlFor="link_type" className="block text-sm font-semibold leading-6 text-black-600">Stream Type:</label>
+          <label htmlFor="video_type" className="block text-sm font-semibold leading-6 text-black-600">Stream Type:</label>
           <select
             className="block w-full rounded-md border-0 px-3.5 py-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
 
-            id="link_type"
-            name="link_type"
+            id="video_type"
+            name="video_type"
             value={formData.video_type}
             onChange={handleChange}
           >

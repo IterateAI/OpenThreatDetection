@@ -18,7 +18,7 @@ const AllAlerts = () => {
         axios.get(API_URL+'/event/events') // Replace with your API endpoint
         .then((response) => {
             console.log(response.data)
-            setData(response.data);
+            setData(response.data.reverse());
         })
         .catch((error) => {
             console.error('Error fetching data:', error);

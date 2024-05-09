@@ -8,7 +8,7 @@ import requests
 
 http = urllib3.PoolManager()
 
-local_restful_event_url = "http://127.0.0.1:5000/event/events"
+local_restful_event_url = "http://127.0.0.1:5000/api/event/events"
 
 def do_push(data_weapon):
 	# do_mqtt(data_weapon)

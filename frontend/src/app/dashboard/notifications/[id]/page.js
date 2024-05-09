@@ -1,5 +1,5 @@
 'use client'
-import { API_URL } from '@/app/config/config';
+import { API_URL, PUBLIC_URL } from '@/app/config/config';
 import { useGlobalContext } from '@/app/context/store';
 import axios from 'axios';
 import Link from 'next/link'
@@ -41,7 +41,7 @@ export default  function Camera({params}) {
                             <div className=' pb-4'>
                                 
                                
-                                    <img className='hover:drop-shadow-lg hover:shadow-black' src={API_URL+"/static/"+data.image_path} />
+                                    <img className='hover:drop-shadow-lg hover:shadow-black' src={PUBLIC_URL+"/"+data.video_name+"/"+data.image_path} />
                                     <span className='font-semibold block mt-2 '>{data.video_name}</span>
                                     <span className=' block mt-2 '>{data.datetime}</span>
                                     <span className='font-semibold block mt-2 '>{data.status}</span>

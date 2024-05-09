@@ -252,10 +252,13 @@ def detect(msg_py,msg_local_py,msg_passing):
                                             log.info("within cnt > {}".format(cfg.bad_frame_skip_size)) 
 
                                         continue
-
+                                        
+                                    if(frame_num%15==0):
+                                        cv2.imwrite(cfg.output_path + video_name + '/' + "live.jpg", frame)
                                     if frame is None:
                                         continue
                                     frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+                                    
                                     #image = Image.fromarray(frame)
                                     cnt_false = 0   # if comes inside try after going to exception make count again 0.
                                 except Exception as e:

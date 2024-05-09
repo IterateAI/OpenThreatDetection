@@ -1,6 +1,6 @@
 'use client'
 import DataTable  from '@/app/components/DataTable';
-import { API_URL } from '@/app/config/config';
+import { API_URL, PUBLIC_URL } from '@/app/config/config';
 import { useGlobalContext } from '@/app/context/store';
 import { getTimeDelay } from '@/app/utils/utils';
 
@@ -56,7 +56,7 @@ const Notifications = () => {
         axios.get(API_URL+'/event/events') // Replace with your API endpoint
         .then((response) => {
             console.log(response.data)
-            const newArray = response.data.slice(0, 6);
+            const newArray = response.data.reverse().slice(0, 6);
             setData(newArray);
         })
         .catch((error) => {
@@ -73,9 +73,9 @@ const Notifications = () => {
                     <div className='text-lg border-b-2 border-red font-semibold text-center  flex justify-center items-center py-4'><img className='w-5 mx-2 h-4' src="/images/Warning.png" />Threat Detected</div>
                     <div className='md:grid px-4 py-4 gap-4 grid-cols-2'>
                         <div className='max-w-2xl'>
-                            <Link href={"/dashboard/notifications/"+0}>
-                            <img src={API_URL+"/static/"+ alerts.image_path} alt='thumbnail' />
-                            </Link>
+                            {/* <Link href={"/dashboard/notifications/"+0}> */}
+                            <img src={PUBLIC_URL+"/"+ alerts.video_name+"/"+ alerts.image_path} alt='thumbnail' />
+                            {/* </Link> */}
                         </div>
                         <div className='px-4 py-4 '>
                             <div className='font-semibold text-lg'>{alerts.datetime}</div>
@@ -122,8 +122,8 @@ const Notifications = () => {
                     {data.map((item, key) => (
                         <div key={key} className='grid grid-cols-2 '>
                             <Link href={"/dashboard/notifications/"+item.id} className='flex justify-center items-center'>
-                                <img src={API_URL+"/static/"+item.image_path} />
-                                <img className='absolute ' src='/app/images/play_icon.png' />
+                                <img src={PUBLIC_URL+"/"+item.video_name+"/"+item.image_path} />
+                                {/* <img className='absolute ' src='/app/images/play_icon.png' /> */}
                             </Link>
 
                             <div className='px-3.5 pt-2'>

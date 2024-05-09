@@ -34,9 +34,10 @@ app.debug=True
 def home():	
 	return render_template("index.html")
 
-@app.route("/static/<filename>")
-def serve_image(filename):
-	return send_from_directory('wepapp/inferences/static',filename)
+@app.route("/public/<path:filename>")
+def serve_file(filename):
+	print("FIles",filename)
+	return send_from_directory('./wepapp/inferences',filename)
 
 
 def start_wep_instance(ini_file):

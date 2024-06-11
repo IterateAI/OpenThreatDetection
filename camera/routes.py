@@ -38,7 +38,7 @@ def get_cameras_as_json():
 
 @camera_bp.route('/cameras/add', methods=["POST"])
 def store_camera_config():
-    # print(request.get_json())
+    print(request.get_json())
     data = request.get_json()
     name = data.get('name')
     location = data.get('location')

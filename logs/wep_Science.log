@@ -1,16 +1,74 @@
-2024-05-10 00:31:08 : INFO : <module> : 12 - Setup complete (v1.0)
-2024-05-10 00:31:08 : INFO : <module> : 21 - No GPU devices found
-2024-05-10 00:31:08 : INFO : <module> : 32 - Input request: {'video_link': 'rtsp://backend2.interplay.com', 'building': 'Science', 'video_type': 'rtsp', 'friendly_name': 'Science', 'file_original_name': None}
-2024-05-10 00:31:08 : INFO : <module> : 40 - Detection for video stream starts...
-2024-05-10 00:31:08 : INFO : <module> : 44 - GPU Utilization before: 
-2024-05-10 00:31:08 : INFO : <module> : 23 - imported packages within inference_images_weapon
-2024-05-10 00:31:08 : INFO : <module> : 41 - loading weapon model: tf
-2024-05-10 00:31:25 : INFO : <module> : 50 - loaded weapon model
-2024-05-10 00:31:25 : INFO : detect : 50 - Video source: rtsp://backend2.interplay.com
-2024-05-10 00:31:25 : INFO : detect : 71 - msg_local_py[payload]: {'video_link': 'rtsp://backend2.interplay.com', 'building': 'Science', 'video_type': 'rtsp', 'friendly_name': 'Science', 'file_original_name': None}
-2024-05-10 00:31:25 : INFO : detect : 134 - Begin video capture now: rtsp://backend2.interplay.com
-2024-05-10 00:31:25 : INFO : detect : 145 - Within reading path
-2024-05-10 00:31:25 : ERROR : detect : 152 - Stream URL is invalid
-2024-05-10 00:31:25 : ERROR : detect : 158 - Exception in the current frame: {'status': 'Stream URL is invalid!', 'video_name': 'Science', 'video_type': 'rtsp', 'datetime': '10-05-2024 00:31:25', 'Threat_status': '', 'last_updated': True}
-2024-05-10 00:31:25 : INFO : <module> : 48 - Response: {'payload': [{'status': 'Stream URL is invalid!', 'video_name': 'Science', 'video_type': 'rtsp', 'datetime': '10-05-2024 00:31:25', 'Threat_status': '', 'last_updated': True}]} <class 'dict'>
-2024-05-10 00:31:25 : INFO : <module> : 50 - GPU Utilization after:
+2024-06-11 12:02:44 : INFO : <module> : 12 - Setup complete (v1.0)
+2024-06-11 12:02:44 : INFO : <module> : 21 - No GPU devices found
+2024-06-11 12:02:44 : INFO : <module> : 32 - Input request: {'video_link': 'rtsp://backend.interplay.iterate.ai/test1.sdp', 'building': 'Science', 'video_type': 'rtsp', 'friendly_name': 'Science', 'file_original_name': None}
+2024-06-11 12:02:44 : INFO : <module> : 40 - Detection for video stream starts...
+2024-06-11 12:02:44 : INFO : <module> : 44 - GPU Utilization before: 
+2024-06-11 12:02:44 : INFO : <module> : 23 - imported packages within inference_images_weapon
+2024-06-11 12:02:44 : INFO : <module> : 41 - loading weapon model: tf
+2024-06-11 12:03:04 : INFO : <module> : 50 - loaded weapon model
+2024-06-11 12:03:04 : INFO : detect : 50 - Video source: rtsp://backend.interplay.iterate.ai/test1.sdp
+2024-06-11 12:03:04 : INFO : detect : 71 - msg_local_py[payload]: {'video_link': 'rtsp://backend.interplay.iterate.ai/test1.sdp', 'building': 'Science', 'video_type': 'rtsp', 'friendly_name': 'Science', 'file_original_name': None}
+2024-06-11 12:03:04 : INFO : detect : 134 - Begin video capture now: rtsp://backend.interplay.iterate.ai/test1.sdp
+2024-06-11 12:03:04 : INFO : detect : 145 - Within reading path
+2024-06-11 12:04:06 : WARNING : detect : 187 - Science folder removed
+2024-06-11 12:04:06 : WARNING : detect : 191 - Science folder created
+2024-06-11 12:04:08 : INFO : detect : 252 - within cnt > 10
+2024-06-11 12:04:09 : INFO : detect : 252 - within cnt > 10
+2024-06-11 12:04:09 : INFO : detect : 252 - within cnt > 10
+2024-06-11 12:04:10 : INFO : detect : 252 - within cnt > 10
+2024-06-11 12:04:10 : INFO : detect : 252 - within cnt > 10
+2024-06-11 12:04:10 : INFO : detect : 252 - within cnt > 10
+2024-06-11 12:04:10 : INFO : detect : 252 - within cnt > 10
+2024-06-11 12:04:11 : INFO : detect : 252 - within cnt > 10
+2024-06-11 12:04:11 : INFO : detect : 252 - within cnt > 10
+2024-06-11 12:04:11 : INFO : detect : 252 - within cnt > 10
+2024-06-11 12:04:12 : INFO : detect : 252 - within cnt > 10
+2024-06-11 12:04:22 : INFO : detect : 252 - within cnt > 10
+2024-06-11 12:04:33 : INFO : detect : 275 - Frame #: 100
+2024-06-11 12:04:34 : INFO : inference_images_weapon : 57 - started weapon inference
+2024-06-11 12:04:45 : INFO : inference_images_weapon : 87 - fps after inference: 0.08544222036216768
+2024-06-11 12:04:46 : INFO : inference_images_weapon : 145 - Ended weapon inference
+2024-06-11 12:04:46 : INFO : detect : 281 - FPS01: 0.08
+2024-06-11 12:04:46 : INFO : detect : 343 - After fetching img
+2024-06-11 12:04:50 : INFO : detect : 275 - Frame #: 200
+2024-06-11 12:04:50 : INFO : inference_images_weapon : 57 - started weapon inference
+2024-06-11 12:04:52 : INFO : inference_images_weapon : 87 - fps after inference: 0.46568249794682653
+2024-06-11 12:04:52 : INFO : inference_images_weapon : 145 - Ended weapon inference
+2024-06-11 12:04:52 : INFO : detect : 281 - FPS01: 0.46
+2024-06-11 12:04:52 : INFO : detect : 343 - After fetching img
+2024-06-11 12:05:10 : INFO : detect : 275 - Frame #: 300
+2024-06-11 12:05:10 : INFO : inference_images_weapon : 57 - started weapon inference
+2024-06-11 12:05:12 : INFO : inference_images_weapon : 87 - fps after inference: 0.4589793166781367
+2024-06-11 12:05:12 : INFO : inference_images_weapon : 145 - Ended weapon inference
+2024-06-11 12:05:12 : INFO : detect : 281 - FPS01: 0.46
+2024-06-11 12:05:12 : INFO : detect : 343 - After fetching img
+2024-06-11 12:05:30 : INFO : detect : 275 - Frame #: 400
+2024-06-11 12:05:30 : INFO : inference_images_weapon : 57 - started weapon inference
+2024-06-11 12:05:32 : INFO : inference_images_weapon : 87 - fps after inference: 0.5060097879376686
+2024-06-11 12:05:32 : INFO : inference_images_weapon : 145 - Ended weapon inference
+2024-06-11 12:05:32 : INFO : detect : 281 - FPS01: 0.50
+2024-06-11 12:05:32 : INFO : detect : 343 - After fetching img
+2024-06-11 12:05:43 : INFO : detect : 275 - Frame #: 500
+2024-06-11 12:05:43 : INFO : inference_images_weapon : 57 - started weapon inference
+2024-06-11 12:05:45 : INFO : inference_images_weapon : 87 - fps after inference: 0.5340362305988221
+2024-06-11 12:05:45 : INFO : inference_images_weapon : 145 - Ended weapon inference
+2024-06-11 12:05:45 : INFO : detect : 281 - FPS01: 0.53
+2024-06-11 12:05:45 : INFO : detect : 343 - After fetching img
+2024-06-11 12:06:01 : INFO : detect : 275 - Frame #: 600
+2024-06-11 12:06:01 : INFO : inference_images_weapon : 57 - started weapon inference
+2024-06-11 12:06:03 : INFO : inference_images_weapon : 87 - fps after inference: 0.5426077255064456
+2024-06-11 12:06:03 : INFO : inference_images_weapon : 145 - Ended weapon inference
+2024-06-11 12:06:03 : INFO : detect : 281 - FPS01: 0.54
+2024-06-11 12:06:03 : INFO : detect : 343 - After fetching img
+2024-06-11 12:06:26 : INFO : detect : 275 - Frame #: 700
+2024-06-11 12:06:26 : INFO : inference_images_weapon : 57 - started weapon inference
+2024-06-11 12:06:27 : INFO : inference_images_weapon : 87 - fps after inference: 0.6185146019474572
+2024-06-11 12:06:27 : INFO : inference_images_weapon : 145 - Ended weapon inference
+2024-06-11 12:06:27 : INFO : detect : 281 - FPS01: 0.62
+2024-06-11 12:06:27 : INFO : detect : 343 - After fetching img
+2024-06-11 12:06:52 : INFO : detect : 275 - Frame #: 800
+2024-06-11 12:06:52 : INFO : inference_images_weapon : 57 - started weapon inference
+2024-06-11 12:06:53 : INFO : inference_images_weapon : 87 - fps after inference: 1.1270632778396563
+2024-06-11 12:06:53 : INFO : inference_images_weapon : 145 - Ended weapon inference
+2024-06-11 12:06:53 : INFO : detect : 281 - FPS01: 1.12
+2024-06-11 12:06:53 : INFO : detect : 343 - After fetching img

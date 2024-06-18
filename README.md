@@ -1,3 +1,69 @@
+### Prerequisites
+The system is support for linux based os and GPU support must for running the backend.
+For running on a windows pc Setup WSL- https://learn.microsoft.com/en-us/windows/wsl/install
+
+## git clone with large files
+
+Open Terminal (For Windows open WSL Ubuntu Terminal):
+```
+# install git-lfs to download large files from github.
+sudo apt-get install git-lfs
+git lfs install
+git clone https://github.com/IterateAI/OpenThreatDetection.git
+
+cd OpenThreatDetection
+# install python 3.10 (If it is not installed)
+sudo apt install python3.10-venv
+
+# Change ownership of the directory (Replace the correct path of the Directory)
+sudo chown -R $(whoami) /home/<user>/OpenThreatDetection
+
+```
+
+## Weapon Detection startup/shutdown
+
+```python
+# create virtual environment 
+python3 -m venv venv
+
+# activate the 'venv'
+source ./venv/bin/activate
+
+pip install -r requirements.txt
+
+python3 app.py
+
+```
+WEPWEB is started from a TTY and binds to port 5000 as follows.
+
+
+# Frontend
+
+![Alt text](image.png)
+![Alt text](image-1.png)
+## Running the Next.js Frontend
+Open Another terminal for Frontend and follow the below stpes. (WSL Ubuntu terminal for Windows pc)
+
+### Prerequisites
+Make sure you have the following installed on your machine:
+
+- Node.js: Download and Install Node.js
+- npm (Node Package Manager): npm is included with Node.js installation.
+
+### Steps
+```js
+cd /home/<user>/OpenThreatDetection/frontend
+```
+
+```js
+npm install
+npm run dev
+```
+Open your web browser and navigate to http://localhost:3000. You should see your Next.js application running.
+### Troubleshooting
+If you encounter issues, refer to the Next.js documentation(https://nextjs.org/docs) for troubleshooting and additional information.
+
+
 # Weapon Detection Web Application (WEPWEB)
 
 version 1.0
@@ -110,24 +176,6 @@ The application uses SQLite as the database for storing and managing data. SQLit
   # Connect to the SQLite database
   connection = sqlite3.connect('path/to/database.db')
 
-## WEPWEB startup/shutdown
-
-```python
-# create virtual environment 
-virtualenv venv
-# activate the 'venv'
-source venv/bin/activate
-
-# install all the dependencies
-pip install -r requirements.txt
-
-```
-
-WEPWEB is started from a TTY and binds to port 5000 as follows.
-
-```js
-$ python app.py
-```
 
 This will start a master process to oversee camera specific WEBAPP processes discussed below, e.g.:
 ```js
@@ -248,28 +296,6 @@ Each WDE will provide the following info:
 
 The following is a sample WDE rendered by the WEPHOOK
 * Science * 07-07-2023 11:28:26 * Weapon Detected |Gun : 82%  * weapon_07-07-2023 11:28:26.jpg
-
-# Frontend
-![Alt text](image.png)
-![Alt text](image-1.png)
-## Running the Next.js Frontend
-### Prerequisites
-Make sure you have the following installed on your machine:
-
-- Node.js: Download and Install Node.js
-- npm (Node Package Manager): npm is included with Node.js installation.
-### Steps
-```js
-cd frontend
-```
-
-```js
-npm install
-npm run dev
-```
-Open your web browser and navigate to http://localhost:3000. You should see your Next.js application running.
-### Troubleshooting
-If you encounter issues, refer to the Next.js documentation(https://nextjs.org/docs) for troubleshooting and additional information.
 
 ## Third party software
 - Tensorflow library version 2.6.0 or later

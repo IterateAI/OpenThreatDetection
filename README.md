@@ -1,41 +1,72 @@
 ### Prerequisites
-The system is support for linux based os and GPU support must for running the backend.
-For running on a windows pc Setup WSL- https://learn.microsoft.com/en-us/windows/wsl/install
 
-## git clone with large files
+- The system must be Linux-based and support GPU for running the backend.
+- For running on a Windows PC, set up WSL: [WSL Installation Guide](https://learn.microsoft.com/en-us/windows/wsl/install).
 
-Open Terminal (For Windows open WSL Ubuntu Terminal):
-```
-# install git-lfs to download large files from github.
-sudo apt-get install git-lfs
-git lfs install
-git clone https://github.com/IterateAI/OpenThreatDetection.git
+### Clone Repository with Large Files
 
-cd OpenThreatDetection
-# install python 3.10 (If it is not installed)
-sudo apt install python3.10-venv
+1. **Open Terminal** (For Windows, open WSL Ubuntu Terminal):
 
-# Change ownership of the directory (Replace the correct path of the Directory)
-sudo chown -R $(whoami) /home/<user>/OpenThreatDetection
+    ```sh
+    # Install git-lfs to download large files from GitHub
+    sudo apt-get install git-lfs
+    git lfs install
+    
+    # Clone the repository
+    git clone https://github.com/IterateAI/OpenThreatDetection.git
+    ```
 
-```
+2. **Change Directory**:
 
-## Weapon Detection startup/shutdown
+    ```sh
+    cd OpenThreatDetection
+    ```
 
-```python
-# create virtual environment 
-python3 -m venv venv
+3. **Install Python 3.10** (if not already installed):
 
-# activate the 'venv'
-source ./venv/bin/activate
+    ```sh
+    sudo apt install python3.10-venv
+    ```
 
-pip install -r requirements.txt
+4. **Change Ownership of the Directory** (Replace `<user>` with your username):
 
-python3 app.py
+    ```sh
+    sudo chown -R $(whoami) /home/<user>/OpenThreatDetection
+    ```
 
-```
+### Weapon Detection Startup/Shutdown
+
+**Startup:**
+
+1. Navigate to the project directory:
+
+    ```sh
+    cd /home/<user>/OpenThreatDetection
+    ```
+
+2. Activate the virtual environment (assuming it has been set up):
+
+    ```sh
+    source venv/bin/activate
+    ```
+3. Install required packages:
+
+    ```sh
+    pip install -r requirements.txt
+    ```
+
+3. Start the backend service (assuming a specific command or script is provided):
+
+    ```sh
+    python3 app.py
+    ```
 WEPWEB is started from a TTY and binds to port 5000 as follows.
 
+4. Deactivate the virtual environment:
+
+    ```sh
+    deactivate
+    ```
 
 # Frontend
 

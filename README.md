@@ -62,7 +62,7 @@
     ```
 WEPWEB is started from a TTY and binds to port 5000 as follows.
 
-4. Deactivate the virtual environment:
+4. Deactivate the virtual environment(Optional)
 
     ```sh
     deactivate
@@ -78,7 +78,7 @@ Open Another terminal for Frontend and follow the below stpes. (WSL Ubuntu termi
 ### Prerequisites
 Make sure you have the following installed on your machine:
 
-- Node.js: Download and Install Node.js
+- Node.js: Download and Install Node.js v20
 - npm (Node Package Manager): npm is included with Node.js installation.
 
 ### Steps

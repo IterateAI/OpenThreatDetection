@@ -115,3 +115,19 @@ def edit_camera_configuration(camera_id):
 
     except Exception as e:
         return jsonify({"message": str(e)}), 500
+
+@camera_bp.route('/cameras/<string:camera_id>', methods=['DELETE'])
+def delete_camera_configuration(camera_id):
+    try:
+        # Get data from the request JSON
+        camera = Camera.query.get(camera_id)
+
+        if camera is None:
+            return jsonify({"error": "Camera not found"}), 404
+        
+        db.session.delete(camera)
+        db.session.commit()
+        return jsonify({"message": "Camera deleted successfully"}), 200
+
+    except Exception as e:
+        return jsonify({"message": str(e)}), 500

@@ -4,7 +4,7 @@ import { API_URL, PUBLIC_URL, routerBase } from '@/app/config/config';
 import { useGlobalContext } from '@/app/context/store';
 import axios from 'axios';
 import Link from 'next/link'
-import { useParams } from 'next/navigation';
+import { useParams, useRouter } from 'next/navigation';
 import React, { useEffect, useState } from 'react'
 
 
@@ -15,6 +15,7 @@ export default function Camera() {
     const params=useParams()
     console.log("Router",params)
     const {id}  = params
+    const route=useRouter()
 
 
     useEffect(() => {
@@ -31,7 +32,16 @@ export default function Camera() {
                 console.error('Error fetching data:', error);
             });
     }, []);
-
+    function deleteCam(){
+        axios.delete(API_URL + '/camera/cameras/' + id) // Replace with your API endpoint
+        .then((response) => {
+            console.log(response.data)
+            route.back()
+        })
+        .catch((error) => {
+            console.error('Error fetching data:', error);
+        });
+    }
     useEffect(() => {
         if(camData){
         const updateImageUrl = () => {
@@ -75,6 +85,12 @@ export default function Camera() {
                                     className="flex w-full justify-center rounded-md bg-white px-3 py-3.5 text-sm font-semibold leading-6 border-2 text-black shadow-sm hover:bg-black-600  "
                                 >
                                     CANCEL 
+                                </Link>
+                                <Link onClick={deleteCam}
+                                    href={"#"}
+                                    className="flex w-full justify-center rounded-md bg-red px-3 py-3.5 text-sm font-semibold leading-6 border-2 text-white shadow-sm hover:bg-black-600  "
+                                >
+                                    DELETE 
                                 </Link>
                             </div>
                         </div>
